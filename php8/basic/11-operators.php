@@ -95,8 +95,11 @@ $y = ['d' => 4, 'e' => 5, 'f' => 6, 'g' => 7, 'h' => 8];
 $z = $x + $y;
 print_r($z);
 
+
 // Execution Operators (``)
 
+
 // Type Operators (instanceof)
+
 
 // Null safe Operator - PHP8 (?)
