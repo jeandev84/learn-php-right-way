@@ -39,6 +39,6 @@ echo $ceil3;
 echo NAN; // Not A Number
 echo log(-1);
 echo INF;
-# echo PHP_FLOAT_MAX * 2;
+echo PHP_FLOAT_MAX * 2;
 
 
