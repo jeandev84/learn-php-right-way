@@ -77,3 +77,8 @@ echo $array[null];
 echo array_shift($array);
 print_r($array);
 
+
+$data = ['a', 'b', 50 => 'c', 'd', 'e'];
+unset($data[50], $data[1]);
+print_r($data);
+
