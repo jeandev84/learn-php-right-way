@@ -41,4 +41,15 @@ echo log(-1);
 echo INF;
 echo PHP_FLOAT_MAX * 2;
 
+$inf = PHP_FLOAT_MAX * 2;
+var_dump(is_infinite($x));
+var_dump(is_finite($x));
+var_dump(is_nan($x));
+var_dump(is_nan(log(-1)));
+var_dump($x);
 
+
+$x = 5;
+$y = 'Hello';
+var_dump(floatval($x)); // => var_dump((float)$x);
+var_dump(intval($y));   // => var_dump((int)$y);
