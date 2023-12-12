@@ -4,6 +4,7 @@
 
 $paymentStatus = 1;
 
+// switch compare with ==
 switch ($paymentStatus):
     case 1:
         echo 'Paid';
@@ -24,8 +25,11 @@ endswitch;
 
 echo '<hr/>';
 
+
+// match compare with ===
 $paymentStatusDisplay = match ($paymentStatus) {
    1 => 'Paid',
+   #(1 > 2) => 'Condition (1 > 2)',
    2,3 => 'Payment Declined',
    0 => 'Pending Payment',
    default => 'Unknown Payment Status'
