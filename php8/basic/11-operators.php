@@ -55,12 +55,30 @@ $test = $k ?? 'oops';
 
 // Error Control Operators (@)
 // @unlink(__DIR__.'/demo.txt');
+$stream = @file('foo.txt');
 
 // Increment/Decrement Operators (++, --)
+$x = 5;
+
+$x++;
+$x--;
+++$x;
+--$x;
 
 // Logical Operators (&& || ! and or xor)
+$x = true;
+$y = false;
+var_dump($x && $y);
+var_dump($x || $y);
+var_dump(!$x);
+var_dump($x and $y);
+var_dump($x or $y);
+var_dump($x xor $y);
+
 
 // Bitwise Operators (& | ^ ~ << >>)
+
+
 
 // Array Operators (+ == === =/= <> ==/=)
 
