@@ -78,7 +78,12 @@ echo array_shift($array);
 print_r($array);
 
 
-$data = ['a', 'b', 50 => 'c', 'd', 'e'];
-unset($data[50], $data[1]);
-print_r($data);
+$mixed = ['a', 'b', 50 => 'c', 'd', 'e'];
+unset($mixed[50], $mixed[1]);
+print_r($mixed);
+
+$numbers = [1, 2, 3];
+unset($numbers[0], $numbers[1], $numbers[2]);
+$numbers[] = 1;
+print_r($numbers);
 
