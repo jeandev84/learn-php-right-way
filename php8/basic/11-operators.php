@@ -45,9 +45,12 @@ var_dump($x <= $y);
 var_dump($x >= $y);
 var_dump($x <=> $y);
 
+$a = 'Hello World';
+$b = strpos($x, 'H');
+echo ($a === false ? 'H Not Found' : 'H Found at index '. $y);
 
 // Error Control Operators (@)
-@unlink(__DIR__.'/demo.txt');
+// @unlink(__DIR__.'/demo.txt');
 
 // Increment/Decrement Operators (++, --)
 
