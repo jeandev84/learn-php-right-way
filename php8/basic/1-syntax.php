@@ -1,4 +1,6 @@
 <?php
+echo "Hello World";
+print 'Hello world';
 $firstName = 'Gio';
 $age       = 30;
 $x         = 10;
