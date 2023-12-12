@@ -87,3 +87,9 @@ unset($numbers[0], $numbers[1], $numbers[2]);
 $numbers[] = 1;
 print_r($numbers);
 
+$a = 5;
+$b = 'something';
+$c = null;
+
+var_dump((array)$a, (array)$b, (array)$c);
+
