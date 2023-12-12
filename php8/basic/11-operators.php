@@ -49,6 +49,10 @@ $a = 'Hello World';
 $b = strpos($x, 'H');
 echo ($a === false ? 'H Not Found' : 'H Found at index '. $y);
 
+$x    = null;
+$y    = $x ?? 'hello';
+$test = $k ?? 'oops';
+
 // Error Control Operators (@)
 // @unlink(__DIR__.'/demo.txt');
 
