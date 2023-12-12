@@ -54,4 +54,29 @@ $programmingLanguages = ['php', 'java', 'c++', 'go', 'php'];
 foreach ($programmingLanguages as $language) {
     echo $language. "<br/>";
 }
+foreach ($programmingLanguages as $key => $language) {
+    echo $key .':'. $language. '<br/>';
+}
 
+
+$user = [
+  'name'    => 'Gio',
+  'email'   => 'gio@email.com',
+  'skills'  => ['php', 'graphql', 'react']
+];
+
+foreach ($user as $key => $value) {
+    echo $key . ': ';
+
+    if (is_array($value)) {
+        foreach ($value as $skill) {
+            echo $skill . ' - ';
+        }
+    } else {
+        echo $value;
+    }
+
+    echo '<hr/>';
+    # echo $key . ': '. implode($value);
+    # echo $key . ': '. json_encode($value);
+}
