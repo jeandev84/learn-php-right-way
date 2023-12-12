@@ -67,3 +67,7 @@ echo '<pre>';
 print_r($programmingLanguages);
 echo '</pre>';
 
+echo $programmingLanguages['php']['website'];
+print_r($programmingLanguages['php']['versions']);
+echo $programmingLanguages['php']['versions'][0]['releaseDate'];
+
