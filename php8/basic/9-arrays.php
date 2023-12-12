@@ -74,4 +74,6 @@ echo $programmingLanguages['php']['versions'][0]['releaseDate'];
 $array = [true => 'a', 1 => 'b', '1' => 'c', 1.8 => 'd', null => 'e'];
 print_r($array);
 echo $array[null];
+echo array_shift($array);
+print_r($array);
 
