@@ -26,7 +26,6 @@ echo '<hr/>';
 
 $paymentStatusDisplay = match ($paymentStatus) {
    1 => 'Paid',
-   #2 => 'Payment Declined',
    2,3 => 'Payment Declined',
    0 => 'Pending Payment'
 };
