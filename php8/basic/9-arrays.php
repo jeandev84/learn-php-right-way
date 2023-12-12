@@ -90,6 +90,9 @@ print_r($numbers);
 $a = 5;
 $b = 'something';
 $c = null;
-
 var_dump((array)$a, (array)$b, (array)$c);
+
+$array = ['a' => 1, 'b' => null];
+var_dump(array_key_exists('a', $array));
+var_dump(isset($array['a']));
 
