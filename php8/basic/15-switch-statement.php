@@ -40,3 +40,21 @@ foreach ($paymentStatuses as $paymentStatus) {
             echo 'Unknown Payment Status';
     endswitch;
 }
+
+
+function x(): int {
+    sleep(3);
+    echo 'Done <br>';
+    return 1;
+}
+
+
+if (x() === 1) {
+    echo 1;
+} elseif (x() === 2) {
+    echo 2;
+} elseif (x() === 3) {
+    echo 3;
+} else {
+    echo 4;
+}
