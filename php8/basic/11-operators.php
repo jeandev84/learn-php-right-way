@@ -75,9 +75,19 @@ var_dump($x and $y);
 var_dump($x or $y);
 var_dump($x xor $y);
 
+function hello(): bool {
+    return false;
+}
+var_dump($x || hello());
+
 
 // Bitwise Operators (& | ^ ~ << >>)
+$x = 6; // 110 binary
+$y = 3; // 011 binary
 
+var_dump($x & $y); // 010 = 2
+var_dump($x | $y);
+var_dump($x ^ $y);
 
 
 // Array Operators (+ == === =/= <> ==/=)
