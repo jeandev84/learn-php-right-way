@@ -1,7 +1,7 @@
 <?php
 
 /* Operator Precedence & Associativity */
-// https://www.php.net/manual/en/language.operators.predence.php
+// https://www.php.net/manual/en/language.operators.precedence.php
 /*
 $x = (5 + 3) * 5;
 echo $x;
@@ -19,3 +19,9 @@ $x = true;
 $y = false;
 $z = true;
 var_dump($x && $y || $z);
+
+$a = true;
+$b = false;
+
+$z = ($a and $b);
+var_dump($z);
