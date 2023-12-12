@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 /* Data Types & Type Casting */
 
@@ -28,3 +29,14 @@
 # 2 Special Types
     # resource
     # null
+
+
+function sum(float $x, float $y) {
+    // var_dump($x, $y);
+    return $x + $y;
+}
+
+
+$sum = sum(3, 2);
+echo $sum;
+var_dump($sum);
