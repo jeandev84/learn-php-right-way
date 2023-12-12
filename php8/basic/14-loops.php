@@ -48,4 +48,10 @@ $length = count($text);
 for ($i = 0; $i < $length; $i++) {
     echo $text[$i] . '<br/>';
 }
+
 // foreach
+$programmingLanguages = ['php', 'java', 'c++', 'go', 'php'];
+foreach ($programmingLanguages as $language) {
+    echo $language. "<br/>";
+}
+
