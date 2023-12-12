@@ -1,6 +1,9 @@
 <?php
-declare(strict_types=1);
 /** return / declare / goto */
+
+// declare - strict_types
+declare(strict_types=1);
+
 
 /*
 function sum(int $x, int $y): int {
@@ -38,9 +41,7 @@ while ($i < $length) {
 
 
 
-
 // declare - encoding
 
 
-// declare - strict_types
 
