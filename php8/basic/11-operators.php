@@ -89,8 +89,11 @@ var_dump($x & $y); // 010 = 2
 var_dump($x | $y);
 var_dump($x ^ $y);
 
-
 // Array Operators (+ == === =/= <> ==/=)
+$x = ['a' => 1, 'b' => 2, 'c' => 3];
+$y = ['d' => 4, 'e' => 5, 'f' => 6, 'g' => 7, 'h' => 8];
+$z = $x + $y;
+print_r($z);
 
 // Execution Operators (``)
 
