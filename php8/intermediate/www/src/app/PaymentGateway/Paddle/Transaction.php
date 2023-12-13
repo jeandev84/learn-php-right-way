@@ -14,6 +14,39 @@ class Transaction
     }
 
 
+    /**
+     * @param float $amount
+     *
+     * @return $this
+    */
+    public function setAmount(float $amount): self
+    {
+        $this->amount = $amount;
+
+        return $this;
+    }
+
+
+
+    /**
+     * @return float
+    */
+    public function getAmount(): float
+    {
+        return $this->amount;
+    }
+
+
+
+
+
+    public function copyFrom(Transaction $transaction): self
+    {
+         var_dump($transaction->amount, $transaction->sendEmail());
+
+         return $this;
+    }
+
 
     public function process(): void
     {
