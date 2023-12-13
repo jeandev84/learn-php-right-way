@@ -130,7 +130,11 @@ prettyPrintArray(array_diff_assoc($array1, $array2, $array3));
 prettyPrintArray(array_diff_key($array1, $array2, $array3));
 
 
-# sorting
+# sorting by values
 $array = ['d' => 3, 'b' => 1, 'c' => 4, 'a' => 2];
 asort($array);
+prettyPrintArray($array);
+
+// sort by keys
+ksort($array);
 prettyPrintArray($array);
