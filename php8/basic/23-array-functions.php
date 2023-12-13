@@ -146,3 +146,12 @@ prettyPrintArray($array);
 
 usort($array, fn($a, $b) => $b <=> $a);
 prettyPrintArray($array);
+
+
+// extractor arrays
+$array = [1, 2, 3, 4];
+# list($a, $b, $c, $d) = $array;
+[$a, $b, $c, $d] = $array;
+[$a, , $c, ] = $array;
+
+echo $a . ', '. $c . '<br/>';
