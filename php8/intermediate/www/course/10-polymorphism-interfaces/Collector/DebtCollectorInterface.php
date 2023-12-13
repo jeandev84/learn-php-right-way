@@ -2,7 +2,7 @@
 
 namespace App\Collector;
 
-interface DebtCollector
+interface DebtCollectorInterface
 {
        public function collect(float $owedAmount): float;
 }
