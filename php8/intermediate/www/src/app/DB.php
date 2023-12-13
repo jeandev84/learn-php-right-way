@@ -8,6 +8,7 @@ class DB
 
      private function __construct(public array $config)
      {
+         echo 'Instance Created<br>';
      }
 
 

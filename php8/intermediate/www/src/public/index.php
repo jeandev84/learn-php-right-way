@@ -14,4 +14,12 @@ echo 'Class called : '. Transaction::getCount()) . ' times.; # 5
 */
 
 
+$transaction = new Transaction(25, 'Transaction 1');
+
+$db = \App\DB::getInstance([]);
+$db = \App\DB::getInstance([]);
+$db = \App\DB::getInstance([]);
+$db = \App\DB::getInstance([]);
+$db = \App\DB::getInstance([]);
+$db = \App\DB::getInstance([]);
 
