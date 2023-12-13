@@ -117,3 +117,14 @@ if ($key === false) {
 if (in_array('a', $array)) {
     echo 'Letter found';
 }
+
+
+# Difference array_diff and array_diff_assoc
+
+$array1  = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5];
+$array2  = ['f' => 4, 'g' => 5, 'i' => 6, 'j' => 7, 'k' => 8];
+$array3  = ['l' => 3, 'm' => 9, 'n' => 10];
+
+prettyPrintArray(array_diff($array1, $array2, $array3));
+
+prettyPrintArray(array_diff_assoc($array1, $array2, $array3));
