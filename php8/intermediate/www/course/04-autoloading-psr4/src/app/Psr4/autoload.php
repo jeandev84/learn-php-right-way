@@ -11,7 +11,7 @@ spl_autoload_register(function ($classname) {
 */
 
 spl_autoload_register(function ($classname) {
-    $path = dirname(__DIR__).'/'. lcfirst(str_replace('\\', '/', $classname)). '.php';
+    $path = dirname(__DIR__) . 'autoload.php/' . lcfirst(str_replace('\\', '/', $classname)). '.php';
 
     if (file_exists($path)) {
         require_once $path;
