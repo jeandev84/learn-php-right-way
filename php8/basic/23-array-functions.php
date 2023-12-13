@@ -65,3 +65,13 @@ $array2  = ['d' => 4, 'e' => 5, 'f' => 6];
 
 $array = array_map(fn($number1, $number2) => $number1 * $number2, $array1, $array2);
 prettyPrintArray($array);
+
+
+# array_merge(array ...$arrays): array
+
+$array1 = [1, 2, 3];
+$array2 = [4, 5, 6];
+$array3 = [7, 8, 9];
+
+$merged = array_merge($array1, $array2, $array3);
+prettyPrintArray($merged);
