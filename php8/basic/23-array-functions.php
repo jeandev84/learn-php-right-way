@@ -126,5 +126,5 @@ $array2  = ['f' => 4, 'g' => 5, 'i' => 6, 'j' => 7, 'k' => 8];
 $array3  = ['l' => 3, 'm' => 9, 'n' => 10];
 
 prettyPrintArray(array_diff($array1, $array2, $array3));
-
 prettyPrintArray(array_diff_assoc($array1, $array2, $array3));
+prettyPrintArray(array_diff_key($array1, $array2, $array3));
