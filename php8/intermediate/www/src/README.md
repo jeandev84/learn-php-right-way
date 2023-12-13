@@ -1,0 +1,1 @@
+# https://php-fig.org/psr/psr-12
