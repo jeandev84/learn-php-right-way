@@ -2,12 +2,12 @@
 
 namespace App\HTML\Form\Element;
 
-abstract class Field
+use app\HTML\Form\Contract\Renderable;
+
+abstract class Field implements Renderable
 {
 
     public function __construct(protected string $name)
     {
     }
-
-    abstract public function render(): string;
 }
