@@ -49,8 +49,8 @@ print_r($array1);
 
 print_r($array2);
 echo '</pre>';
-*/
 
+// Closure is callable
 $sum = function (callable $callback, int|float ...$numbers): int|float {
     return $callback(array_sum($numbers));
 };
@@ -59,4 +59,30 @@ function doubleElement($element): int|float {
     return $element * 2;
 }
 
+// callback1
 echo $sum('doubleElement', 1, 2, 3, 4);
+
+// callback2
+echo $sum(function ($element) {
+    return $element * 2;
+}, 1, 2, 3, 4);
+*/
+
+
+// Transform to Arrow function
+$array = [1, 2, 3, 4];
+
+/*
+$array2 = array_map(function ($number) {
+    return $number * $number;
+}, $array);
+*/
+
+$array2 = array_map(fn($number) => $number * $number , $array);
+
+
+echo '<pre>';
+print_r($array2);
+echo '</pre>';
+
+
