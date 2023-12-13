@@ -15,4 +15,10 @@ ini_set('error_reporting', 0);
 ini_set('error_reporting', E_ALL && ~E_WARNING);
 
 
+var_dump(ini_get('display_errors'));
+ini_set('display_errors', 0);
+ini_set('display_errors', 1);
+
+
+
 
