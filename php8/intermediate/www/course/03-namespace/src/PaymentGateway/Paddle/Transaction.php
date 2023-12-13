@@ -1,9 +1,6 @@
 <?php
 namespace PaymentGateway\Paddle;
 
-use DateTime;
-use Notification\Email;
-
 class Transaction
 {
      public function __construct()

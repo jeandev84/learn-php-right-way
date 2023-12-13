@@ -1,21 +1,12 @@
 <?php
 
-require_once '../PaymentGateway/Stripe/Transaction.php';
-require_once '../Notification/Email.php';
-require_once '../PaymentGateway/Paddle/CustomerProfile.php';
-require_once '../PaymentGateway/Paddle/Transaction.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
-# var_dump(new \PaymentGateway\Paddle\Transaction());
-
-use PaymentGateway\Paddle\{Transaction, CustomerProfile};
-use PaymentGateway\Stripe\Transaction as StripeTransaction;
-
+use App\PaymentGateway\Paddle\Transaction;
 
 $paddleTransaction = new Transaction();
-$stripeTransaction = new StripeTransaction();
-$paddleCustomerProfile = new CustomerProfile();
 
-var_dump($paddleCustomerProfile, $paddleTransaction, $stripeTransaction);
+dd($paddleTransaction);
 
 
 
