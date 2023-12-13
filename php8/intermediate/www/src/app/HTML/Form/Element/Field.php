@@ -2,15 +2,12 @@
 
 namespace App\HTML\Form\Element;
 
-class Field
+abstract class Field
 {
 
     public function __construct(protected string $name)
     {
     }
 
-    public function render(): string
-    {
-        return '';
-    }
+    abstract public function render(): string;
 }

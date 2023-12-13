@@ -2,6 +2,6 @@
 
 namespace App\HTML\Form\Element;
 
-class Boolean extends Field
+abstract class Boolean extends Field
 {
 }

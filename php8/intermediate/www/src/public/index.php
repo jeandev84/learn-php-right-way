@@ -5,9 +5,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 /** @var \App\HTML\Form\Element\Field[] $fields */
 $fields = [
-    new \App\HTML\Form\Element\Field('baseField'),
     new \App\HTML\Form\Element\Text('textField'),
-    new \App\HTML\Form\Element\Boolean('booleanField'),
     new \App\HTML\Form\Element\Checkbox('checkboxField'),
     new \App\HTML\Form\Element\Radio('radioField'),
 ];
