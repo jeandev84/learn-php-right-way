@@ -44,7 +44,7 @@ $programmingLanguages = [
     'php'    => [
         'creator' => 'Rasmus Lerdorf',
         'extension' => '.php',
-        'website' => 'www.php.net',
+        'website' => 'include-files.php.net',
         'isOpensource' => true,
         'versions' => [
             ['version' => 8, 'releaseDate' => 'Nov 26, 2020'],
@@ -54,7 +54,7 @@ $programmingLanguages = [
     'python' =>  [
         'creator' => 'Guido Van Rossum',
         'extension' => '.py',
-        'website' => 'www.python.org',
+        'website' => 'include-files.python.org',
         'isOpensource' => true,
         'versions' => [
             ['version' => 3.9, 'releaseDate' => 'Oct 5, 2020'],

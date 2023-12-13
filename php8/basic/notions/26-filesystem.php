@@ -71,7 +71,7 @@ function readCsv(string $filename, string $mode = 'r'): void {
     fclose($file);
 }
 
-readCsv(__DIR__.'/data/file.txt');
+readCsv(__DIR__ . '/data/file.txt');
 
 
 // GET content
