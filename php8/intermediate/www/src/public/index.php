@@ -9,9 +9,14 @@ require_once '../PaymentGateway/Paddle/Transaction.php';
 
 use PaymentGateway\Paddle\Transaction;
 use PaymentGateway\Stripe\Transaction as StripeTransaction;
+use PaymentGateway\Paddle\CustomerProfile;
+
 
 $paddleTransaction = new Transaction();
 $stripeTransaction = new StripeTransaction();
+$paddleCustomerProfile = new CustomerProfile();
+
+var_dump($paddleCustomerProfile, $paddleTransaction, $stripeTransaction);
 
 
 
