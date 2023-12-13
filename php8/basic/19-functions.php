@@ -48,5 +48,5 @@ $y = 3;
 
 # setcookie(name: 'foo', value: 'bar', httponly: true);
 
-echo foo(x: $x, y: $y);
+echo foo($x, y: $y);
 
