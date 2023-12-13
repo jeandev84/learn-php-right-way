@@ -16,3 +16,4 @@ if (! file_exists('foo.txt')) {
 
 echo filesize('too.txt');
 file_put_contents('foo.txt', 'hello world');
+echo filesize('too.txt');
