@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 
 
 /**
@@ -31,6 +31,7 @@ function getTransactionFiles(string $dirPath): array {
 
 /**
  * @param string $fileName
+ * @param callable|null $transactionHandler
  * @return array
 */
 function getTransactions(string $fileName, ?callable $transactionHandler = null): array {
@@ -60,6 +61,10 @@ function getTransactions(string $fileName, ?callable $transactionHandler = null)
 
 
 
+/**
+ * @param array $transactionRow
+ * @return array
+*/
 function extractTransaction(array $transactionRow): array {
 
     [$date, $checkNumber, $description, $amount] = $transactionRow;
@@ -72,4 +77,27 @@ function extractTransaction(array $transactionRow): array {
        'description' => $description,
        'amount' => $amount,
     ];
+}
+
+
+
+/**
+ * @param array $transactions
+ *
+ * @return int[]
+*/
+function calculateTotal(array $transactions): array {
+     $totals = ['netTotal' => 0, 'totalIncome' => 0, 'totalExpense' => 0];
+
+     foreach ($transactions as $transaction) {
+         $totals['netTotal'] += $transaction['amount'];
+
+         if ($transaction['amount'] >= 0) {
+             $totals['totalIncome'] += $totals['amount'];
+         } else {
+             $totals['totalExpense'] += $transaction['amount'];
+         }
+     }
+
+     return $totals;
 }
