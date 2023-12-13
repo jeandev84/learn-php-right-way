@@ -143,3 +143,6 @@ prettyPrintArray($array);
 // custom sort
 usort($array, fn($a, $b) => $a <=> $b);
 prettyPrintArray($array);
+
+usort($array, fn($a, $b) => $b <=> $a);
+prettyPrintArray($array);
