@@ -86,3 +86,22 @@ $invoiceItems = [
   ['price' => 14.99,  'qty' => 2, 'desc' => 'Item 4'],
   ['price' => 4.99,   'qty' => 4, 'desc' => 'Item 5']
 ];
+
+$total = array_reduce(
+    $invoiceItems,
+    fn($sum, $item) => $sum + $item['qty'] * $item['price']
+);
+
+echo $total;
+
+
+$total = array_reduce(
+    $invoiceItems,
+    fn($sum, $item) => $sum + $item['qty'] * $item['price'],
+500
+);
+
+echo $total;
+
+
+#
