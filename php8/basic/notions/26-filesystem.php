@@ -53,7 +53,7 @@ function read(string $filename): void {
     fclose($file);
 }
 
-/* writeTo(__DIR__.'/data/file.txt', 'hello world'); */
+/* writeTo(__DIR__.'/transaction_files/file.txt', 'hello world'); */
 
 
 function readCsv(string $filename, string $mode = 'r'): void {
