@@ -2,7 +2,6 @@
 
 namespace App\HTML\Form\Element;
 
-class TextareaType extends Field
+class Boolean extends Field
 {
-
 }
