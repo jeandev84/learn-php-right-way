@@ -74,3 +74,8 @@ function readCsv(string $filename, string $mode = 'r'): void {
 readCsv(__DIR__.'/data/file.txt');
 
 
+// GET content
+$content = file_get_contents('foo.txt', offset: 3, length: 2);
+echo $content;
+
+# rename('foo.txt', 'bar.txt');
