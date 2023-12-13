@@ -31,3 +31,37 @@ $evens = array_filter($array, fn($number) => $number % 2 === 0, ARRAY_FILTER_USE
 $evens = array_values($evens);
 
 prettyPrintArray($evens);
+
+
+# array_keys(array $keys, mixed $search_value, bool $strict = false): array
+
+$array = ['a' => 5, 'b' => 10, 'c' => 15, 'd' => 5, 'e' => 10];
+
+$keys  = array_keys($array);
+prettyPrintArray($keys);
+
+$keys  = array_keys($array, 5);
+prettyPrintArray($keys);
+
+$keys  = array_keys($array, 10);
+prettyPrintArray($keys);
+
+$keys  = array_keys($array, 15);
+prettyPrintArray($keys);
+
+$keys  = array_keys($array, 15, true);
+prettyPrintArray($keys);
+
+
+# array_map(callable|null $callback, array $array, array ...$arrays): array
+
+$array = [1, 2, 3, 4, 5, 6, 6, 8, 9, 10];
+$array = array_map(fn($number) => $number * 3, $array);
+prettyPrintArray($array);
+
+
+$array1  = ['a' => 1, 'b' => 2, 'c' => 3];
+$array2  = ['d' => 4, 'e' => 5, 'f' => 6];
+
+$array = array_map(fn($number1, $number2) => $number1 * $number2, $array1, $array2);
+prettyPrintArray($array);
