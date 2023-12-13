@@ -1,14 +1,29 @@
 <?php
 namespace App\PaymentGateway\Paddle;
 
+use App\Enums\Status;
+
 class Transaction
 {
+
+     private string $status;
+
+
      public function __construct()
      {
-         # var_dump(new CustomerProfile());
-         # var_dump(new DateTime());
-         # var_dump(new Email());
-         var_dump(explode(',', 'some,text,separated,by,comma'));
+         $this->setStatus(Status::PENDING);
+     }
+
+
+     public function setStatus(string $status): self
+     {
+         if (! isset(Status::ALL_STATUSES[$status])) {
+              throw new \InvalidArgumentException('Invalid status');
+         }
+
+         $this->status = $status;
+
+         return $this;
      }
 }
 

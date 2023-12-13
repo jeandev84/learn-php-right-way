@@ -1,17 +1,13 @@
 <?php
+use App\PaymentGateway\Paddle\Transaction;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-use App\PaymentGateway\Paddle\Transaction;
+$transaction = new Transaction();
+// echo Transaction::class;
 
-$paddleTransaction = new Transaction();
+$transaction->setStatus(\App\Enums\Status::PAID);
 
-$id = new \Ramsey\Uuid\UuidFactory();
-
-echo $id->uuid4();
-
-
-dump($paddleTransaction);
-
+dump($transaction);
 
 
