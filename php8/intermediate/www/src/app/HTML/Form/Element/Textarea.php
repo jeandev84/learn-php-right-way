@@ -8,7 +8,7 @@ class Textarea extends Field
     public function render(): string
     {
         return <<<HTML
-         <input type="text" name="{$this->name}">
+         <textarea name="{$this->name}"></textarea>
 HTML;
 
     }
