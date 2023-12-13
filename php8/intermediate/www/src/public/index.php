@@ -3,11 +3,8 @@
 require_once __DIR__.'/../vendor/autoload.php';
 
 
-/*
-$collector = new \App\Collector\CollectionAgency();
-echo $collector->collect(100);
-*/
+$invoice = new \App\Invoice\Invoice(15);
 
-$service = new \App\Collector\DebtCollectionService();
+$invoice();
 
-$service->collectDebt(new \App\Collector\Rocky());
+echo $invoice;
