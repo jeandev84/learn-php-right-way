@@ -14,4 +14,11 @@ class ClassA
         dump(get_called_class());
         return static::$name;
     }
+
+
+
+    public static function make(): static
+    {
+        return new static();
+    }
 }
