@@ -43,3 +43,14 @@ echo date('m/d/Y g:ia', strtotime('first day of february'));
 echo date('m/d/Y g:ia', strtotime('last day of february'));
 echo date('m/d/Y g:ia', strtotime('last day of february 2020'));
 echo date('m/d/Y g:ia', strtotime('second friday of January'));
+
+
+$date = date('m/d/Y g:ia', strtotime('second friday of January'));
+
+echo '<pre>';
+print_r(date_parse($date));
+echo '</pre>';
+
+echo '<pre>';
+print_r(date_parse_from_format('m/d/Y g:ia', $date));
+echo '</pre>';
