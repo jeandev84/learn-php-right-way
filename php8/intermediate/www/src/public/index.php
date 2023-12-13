@@ -2,9 +2,12 @@
 
 // Classes & Objects
 require_once '../Transaction.php';
-$amount = (new Transaction(100, 'Transaction 1'))
-          ->addTax(8)
-          ->applyDiscount(10)
-          ->getAmount();
+$transaction = (new Transaction(100, 'Transaction 1'))
+                ->addTax(8)
+                ->applyDiscount(10);
 
-echo $amount;
+$amount = $transaction->getAmount();
+
+$transaction = null;
+
+var_dump($amount);
