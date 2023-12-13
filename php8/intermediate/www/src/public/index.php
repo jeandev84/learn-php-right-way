@@ -13,3 +13,10 @@ $toaster->addSlice('bread');
 $toaster->addSlice('bread');
 $toaster->addSlice('bread');
 $toaster->toastBagel();
+
+
+foo($toaster);
+
+function foo(\App\Toasters\Toaster $toaster): void {
+    $toaster->toast();
+}
