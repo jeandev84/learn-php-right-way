@@ -138,3 +138,8 @@ prettyPrintArray($array);
 // sort by keys
 ksort($array);
 prettyPrintArray($array);
+
+
+// custom sort
+usort($array, fn($a, $b) => $a <=> $b);
+prettyPrintArray($array);
