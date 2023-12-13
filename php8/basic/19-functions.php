@@ -24,6 +24,13 @@ function sum(int|float $x, int|float $y, int|float ...$numbers): int|float {
     return $x + $y + array_sum($numbers);
 }
 
+/*
 $a = 6.0;
 $b = 7;
 echo sum($a, $b, 50, 100, 25, 8, 9);
+*/
+
+$a       = 6.0;
+$b       = 7;
+$numbers = [50, 100, 25, 8, 9];
+echo sum($a, $b, ...$numbers);
