@@ -104,4 +104,16 @@ $total = array_reduce(
 echo $total;
 
 
-#
+# array_search(mixed $needle, array $haystack, bool $strict = false): int|string|false
+
+$array = ['a', 'b', 'c', 'D', 'E', 'ab', 'bc', 'cd', 'b', 'd'];
+$key   = array_search('D', $array);
+echo $key;
+
+if ($key === false) {
+    echo 'Letter not found';
+}
+
+if (in_array('a', $array)) {
+    echo 'Letter found';
+}
