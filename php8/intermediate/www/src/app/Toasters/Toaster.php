@@ -7,7 +7,7 @@ class Toaster
     protected int $size     = 2;
 
 
-    public function addSlice(string $slice): void
+    final public function addSlice(string $slice): void
     {
          if (count($this->slices) < $this->size) {
              $this->slices[] = $slice;
