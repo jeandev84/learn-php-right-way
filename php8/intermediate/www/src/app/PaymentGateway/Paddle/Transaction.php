@@ -27,6 +27,16 @@ class Transaction
 
     public function process(): void
     {
+         /*
+         array_map(static function () {
+             var_dump($this->amount);
+         }, [1]);
+         */
+
+        array_map(function () {
+            $this->amount = 35;
+        }, [1]);
+
          echo 'Processing paddle transaction...';
     }
 }
