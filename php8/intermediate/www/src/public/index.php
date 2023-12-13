@@ -1,13 +1,12 @@
 <?php
 
 // Classes & Objects
+require_once '../PaymentProfile.php';
+require_once '../Customer.php';
 require_once '../Transaction.php';
-$transaction = (new Transaction(100, 'Transaction 1'))
-                ->addTax(8)
-                ->applyDiscount(10);
 
-$amount = $transaction->getAmount();
+$transaction = new Transaction(5, 'test');
 
-$transaction = null;
+echo $transaction->getCustomer()?->getPaymentProfile()?->id ?? 'foo';
 
-var_dump($amount);
+
