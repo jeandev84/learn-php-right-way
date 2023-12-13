@@ -33,3 +33,13 @@ echo date('m/d/Y g:ia', $currentTime - 60 * 60 * 24);
 // Make time and format
 $time = mktime(0, 0, 0, 4, 10, null);
 echo date('m/d/Y g:ia', $time);
+
+
+$format = strtotime('2021-01-18 07:00:00');
+echo date('m/d/Y g:ia', strtotime($format));
+
+echo date('m/d/Y g:ia', strtotime('tomorrow'));
+echo date('m/d/Y g:ia', strtotime('first day of february'));
+echo date('m/d/Y g:ia', strtotime('last day of february'));
+echo date('m/d/Y g:ia', strtotime('last day of february 2020'));
+echo date('m/d/Y g:ia', strtotime('second friday of January'));
