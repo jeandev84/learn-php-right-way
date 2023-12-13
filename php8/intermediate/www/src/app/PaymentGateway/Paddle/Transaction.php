@@ -1,29 +1,33 @@
 <?php
 namespace App\PaymentGateway\Paddle;
 
-use App\Enums\Status;
 
 class Transaction
 {
 
-     private string $status;
+    private static int $count = 0;
 
 
-     public function __construct()
-     {
-         $this->setStatus(Status::PENDING);
-     }
+    public function __construct(
+        public float  $amount,
+        public string $description
+    )
+    {
+         self::$count++;
+    }
 
 
-     public function setStatus(string $status): self
-     {
-         if (! isset(Status::ALL_STATUSES[$status])) {
-              throw new \InvalidArgumentException('Invalid status');
-         }
+    /**
+     * @return int
+    */
+    public static function getCount(): int
+    {
+        return self::$count;
+    }
 
-         $this->status = $status;
-
-         return $this;
-     }
+    public function process(): void
+    {
+         echo 'Processing paddle transaction...';
+    }
 }
 
