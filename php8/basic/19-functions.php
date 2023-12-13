@@ -50,3 +50,6 @@ $y = 3;
 
 echo foo($x, y: $y);
 
+$arr = ['x' => 1, 'y' => 2];
+echo foo(...$arr);
+
