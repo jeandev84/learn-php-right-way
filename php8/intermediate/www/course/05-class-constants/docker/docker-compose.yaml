@@ -5,7 +5,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: programwithgio-demo
+    container_name: programwithgio-app
     restart: always
     working_dir: /var/www/
     volumes:
