@@ -2,7 +2,7 @@
 
 /** Functions */
 
-
+/*
 function multi(int|float $x, int|float $y = 10): int|float {
     if ($x % 2 === 0) {
         $x /= 2;
@@ -17,3 +17,13 @@ function sum(...$numbers): int|float {
 }
 
 echo sum(6.0, 7, 50, 100, 25, 8, 9);
+
+*/
+
+function sum(int|float $x, int|float $y, int|float ...$numbers): int|float {
+    return $x + $y + array_sum($numbers);
+}
+
+$a = 6.0;
+$b = 7;
+echo sum($a, $b, 50, 100, 25, 8, 9);
