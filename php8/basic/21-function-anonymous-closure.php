@@ -20,9 +20,10 @@ if (is_callable($func)) {
     echo 'Not Callable';
 }
 
-
+$x =1;
 // anonymous function
-$sum = function (int|float ...$numbers): int|float {
+$sum = function (int|float ...$numbers) use ($x): int|float {
+    echo $x;
     return array_sum($numbers);
 };
 
