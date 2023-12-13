@@ -10,6 +10,8 @@ class Transaction
      {
          # var_dump(new CustomerProfile());
          # var_dump(new DateTime());
-         var_dump(new Email());
+         # var_dump(new Email());
+         var_dump(explode(',', 'some,text,separated,by,comma'));
      }
 }
+
