@@ -5,9 +5,9 @@
 $x = 5;
 
 function foo(): void {
-    global $x;
-    $x = 10;
-    echo $x;
+    global $func;
+    $func = 10;
+    echo $func;
 }
 
 foo();
@@ -15,8 +15,8 @@ echo $x;
 
 
 function func(): void {
-    $GLOBALS['x'] = 10;
-    echo $GLOBALS['x'];
+    $GLOBALS['func'] = 10;
+    echo $GLOBALS['func'];
 }
 
 foo();
