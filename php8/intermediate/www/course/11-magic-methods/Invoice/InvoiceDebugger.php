@@ -19,5 +19,5 @@ class InvoiceDebugger
 }
 
 
-$debug = new InvoiceDebugger();
+$debug = new \App\MagicMethods\Invoice\InvoiceDebugger();
 var_dump($debug);

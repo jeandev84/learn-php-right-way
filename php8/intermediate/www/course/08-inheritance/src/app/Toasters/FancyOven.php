@@ -1,6 +1,8 @@
 <?php
 namespace App\Toasters;
 
+use App\Inheritance\Toasters\ToasterPro;
+
 class FancyOven
 {
 

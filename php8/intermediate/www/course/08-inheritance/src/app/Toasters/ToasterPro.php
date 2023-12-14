@@ -2,6 +2,8 @@
 
 namespace App\Toasters;
 
+use App\Inheritance\Toasters\Toaster;
+
 class ToasterPro extends Toaster
 {
     protected int $size = 4;

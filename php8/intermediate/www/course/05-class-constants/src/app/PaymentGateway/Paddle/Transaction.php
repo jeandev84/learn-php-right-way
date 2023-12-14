@@ -1,7 +1,7 @@
 <?php
 namespace App\PaymentGateway\Paddle;
 
-use App\Enums\Status;
+use App\StaticMethodsProperties\Enums\Status;
 
 class Transaction
 {

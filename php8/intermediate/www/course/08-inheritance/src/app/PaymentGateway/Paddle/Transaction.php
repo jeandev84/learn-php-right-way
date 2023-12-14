@@ -40,7 +40,7 @@ class Transaction
 
 
 
-    public function copyFrom(Transaction $transaction): self
+    public function copyFrom(\App\StaticMethodsProperties\PaymentGateway\Paddle\Transaction $transaction): self
     {
          var_dump($transaction->amount, $transaction->sendEmail());
 

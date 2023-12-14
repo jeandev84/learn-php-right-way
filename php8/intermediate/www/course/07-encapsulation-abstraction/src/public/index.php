@@ -1,5 +1,6 @@
 <?php
-use App\PaymentGateway\Paddle\Transaction;
+
+use App\StaticMethodsProperties\PaymentGateway\Paddle\Transaction;
 
 require_once __DIR__.'/../vendor/autoload.php';
 

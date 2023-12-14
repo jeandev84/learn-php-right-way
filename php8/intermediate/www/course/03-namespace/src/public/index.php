@@ -7,9 +7,9 @@ require_once '../PaymentGateway/Paddle/Transaction.php';
 
 # var_dump(new \PaymentGateway\Paddle\Transaction());
 
-use app\PaymentGateway\Paddle\{CustomerProfile};
-use app\PaymentGateway\Paddle\Transaction;
-use app\PaymentGateway\Stripe\Transaction as StripeTransaction;
+use App\StaticMethodsProperties\PaymentGateway\Paddle\{CustomerProfile};
+use App\StaticMethodsProperties\PaymentGateway\Paddle\Transaction;
+use App\StaticMethodsProperties\PaymentGateway\Stripe\Transaction as StripeTransaction;
 
 
 $paddleTransaction = new Transaction();

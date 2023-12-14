@@ -2,7 +2,8 @@
 
 namespace App\Coffee\Makers;
 
-use App\Coffee\Traits\CappuccinoTrait;
+use App\Traits\Coffee\Makers\CoffeeMaker;
+use App\Traits\Coffee\Traits\CappuccinoTrait;
 
 class CappuccinoMaker extends CoffeeMaker
 {

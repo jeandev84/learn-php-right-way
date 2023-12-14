@@ -4,7 +4,7 @@ namespace App;
 
 class DB
 {
-     public static ?DB $instance = null;
+     public static ?StaticMethodsProperties\DB $instance = null;
 
      private function __construct(public array $config)
      {
@@ -13,10 +13,10 @@ class DB
 
 
 
-     public static function getInstance(array $config): DB
+     public static function getInstance(array $config): StaticMethodsProperties\DB
      {
           if (self::$instance === null) {
-              self::$instance = new DB($config);
+              self::$instance = new StaticMethodsProperties\DB($config);
           }
 
           return self::$instance;

@@ -1,12 +1,13 @@
 <?php
-use App\PaymentGateway\Paddle\Transaction;
+
+use App\StaticMethodsProperties\PaymentGateway\Paddle\Transaction;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
 $transaction = new Transaction();
 // echo Transaction::class;
 
-$transaction->setStatus(\App\Enums\Status::PAID);
+$transaction->setStatus(\App\StaticMethodsProperties\Enums\Status::PAID);
 
 dump($transaction);
 
