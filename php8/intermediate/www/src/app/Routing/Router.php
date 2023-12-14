@@ -10,7 +10,7 @@ class Router
       private array $routes = [];
 
 
-      public function map(string $route, callable|array $action): self
+      public function register(string $route, callable|array $action): self
       {
           $this->routes[$route] = $action;
 
@@ -18,7 +18,7 @@ class Router
       }
 
 
-      public function dispatch(string $requestUri): mixed
+      public function resolve(string $requestUri): mixed
       {
           $route  = explode('?', $requestUri)[0];
           $action = $this->routes[$route] ?? null;
