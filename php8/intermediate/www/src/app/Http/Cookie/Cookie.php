@@ -2,7 +2,8 @@
 
 namespace App\Http\Cookie;
 
-class Cookie
-{
+use App\Http\ParameterBag;
 
+class Cookie extends ParameterBag implements CookieInterface
+{
 }
