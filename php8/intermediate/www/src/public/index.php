@@ -3,25 +3,11 @@
 require_once __DIR__.'/../vendor/autoload.php';
 
 
-$invoiceCollection = new \App\Iterators\Invoices\InvoiceIteratorAggregate([
-    new \App\Iterators\Invoices\Invoice(15),
-    new \App\Iterators\Invoices\Invoice(25),
-    new \App\Iterators\Invoices\Invoice(50),
-]);
+$router = new \App\Routing\Router();
 
-foreach ($invoiceCollection as $invoice) {
-    echo $invoice->id . ' - '. $invoice->amount . PHP_EOL;
-}
+$router->map('/', [\App\Controllers\HomeController::class, 'index'])
+       ->map('/invoices', [\App\Controllers\InvoiceController::class, 'index'])
+       ->map('/invoices/create', [\App\Controllers\InvoiceController::class, 'create'])
+;
 
-
-foo($invoiceCollection);
-foo([1, 2, 3]);
-
-
-// $iterable : Collection | iterable
-function foo(iterable $iterable): void {
-    foreach ($iterable as $i => $item) {
-        // ...
-        echo $i . PHP_EOL;
-    }
-}
+echo $router->dispatch($_SERVER['REQUEST_URI']);
