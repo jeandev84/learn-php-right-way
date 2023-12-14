@@ -10,7 +10,7 @@ class Router
       private array $routes = [];
 
 
-      public function map(string $method, string $route, callable|array $action): self
+      public function register(string $method, string $route, callable|array $action): self
       {
           $this->routes[$method][$route] = $action;
 
@@ -20,13 +20,13 @@ class Router
 
       public function get(string $route, callable|array $action): self
       {
-          return $this->map('get', $route, $action);
+          return $this->register('get', $route, $action);
       }
 
 
       public function post(string $route, callable|array $action): self
       {
-          return $this->map('post', $route, $action);
+          return $this->register('post', $route, $action);
       }
 
 

@@ -6,6 +6,8 @@ class InvoiceController
 {
     public function index(): string
     {
+        # dump($_SESSION);
+        # setcookie('userName', 'Brown', time() - (24 * 60 * 60));
         return 'Invoices';
     }
 
