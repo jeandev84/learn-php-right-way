@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Routing;
+namespace Framework\Routing;
 
-use App\Routing\Exceptions\RouteNotfoundException;
+use Framework\Routing\Exceptions\RouteNotfoundException;
 
 class Router
 {

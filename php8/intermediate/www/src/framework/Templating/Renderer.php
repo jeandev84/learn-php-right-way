@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Templating;
+namespace Framework\Templating;
 
 class Renderer
 {

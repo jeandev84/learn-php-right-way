@@ -3,12 +3,35 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Templating\View;
 
 class HomeController
 {
 
      public function index(): string
+     {
+         return <<<FORM
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <input type="file" name="receipt">
+  <button type="submit">Upload</button>
+</form>
+FORM;
+
+     }
+
+
+     public function upload(): void
+     {
+          dump($_FILES);
+          # dump(pathinfo($_FILES['receipt']['tmp_name']));
+
+          $filePath = STORAGE_PATH . '/'. $_FILES['receipt']['name'];
+          move_uploaded_file($_FILES['receipt']['tmp_name'], $filePath);
+
+          dump(pathinfo($filePath));
+     }
+
+
+     private function sessionCookies()
      {
          # $_SESSION['count'] = ($_SESSION['count'] ?? 0) + 1;
 
@@ -24,6 +47,6 @@ class HomeController
          setcookie('userName', 'Brown', time() + (24 * 60 * 60));
          */
 
-         return View::make('index', $_GET)->render();
+         # return View::make('index', $_GET)->render();
      }
 }

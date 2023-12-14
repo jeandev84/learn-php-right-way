@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Cookie;
+namespace Framework\Http\Cookie;
 
-use App\Http\ParameterBag;
+use Framework\Http\ParameterBag;
 
 class Cookie extends ParameterBag implements CookieInterface
 {

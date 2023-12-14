@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Superglobals\Routing;
 
-use App\Routing\Exceptions\RouteNotfoundException;
+use framework\Routing\Exceptions\RouteNotfoundException;
 
 class Router
 {

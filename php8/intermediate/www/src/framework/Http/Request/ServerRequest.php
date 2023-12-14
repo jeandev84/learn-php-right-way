@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Request;
+namespace Framework\Http\Request;
 
-use App\Http\Cookie\Cookie;
-use App\Http\Request\Bag\FileBag;
-use App\Http\Request\Bag\InputBag;
-use App\Http\Request\Bag\ServerBag;
+use Framework\Http\Cookie\Cookie;
+use Framework\Http\Request\Bag\FileBag;
+use Framework\Http\Request\Bag\InputBag;
+use Framework\Http\Request\Bag\RequestHeadersBag;
+use Framework\Http\Request\Bag\ServerBag;
 
 class ServerRequest
 {
@@ -16,6 +17,7 @@ class ServerRequest
      public InputBag $queries;
      public InputBag $request;
      public ServerBag $server;
+     public RequestHeadersBag $headers;
      public Cookie $cookies;
      public FileBag $files;
 
@@ -27,8 +29,9 @@ class ServerRequest
          $this->queries  = new InputBag();
          $this->request  = new InputBag();
          $this->server   = new ServerBag();
+         $this->headers  = new RequestHeadersBag();
          $this->files    = new FileBag();
-         $this->cookies   = new Cookie();
+         $this->cookies  = new Cookie();
      }
 
 
@@ -191,14 +194,14 @@ class ServerRequest
     {
          $request = new static(
       $_SERVER['REQUEST_METHOD'] ?? 'GET',
-         $_SERVER['REQUEST_URI'] ?? '/',
+         'http://localhost:8000'. $_SERVER['REQUEST_URI'],
              $_SERVER['SERVER_PROTOCOL']
          );
          $request->withServerParams($_SERVER)
                  ->withQueryParams($_GET)
                  ->withParsedBody($_POST)
                  ->withCookieParams($_COOKIE)
-         ;
+                 ->withUploadedFiles($_FILES);
 
          return $request;
     }
