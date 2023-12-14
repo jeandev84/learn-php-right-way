@@ -1,7 +1,5 @@
 <?php
 
-require_once __DIR__.'/../vendor/autoload.php';
-
 
 $invoiceCollection = new \App\Iterators\Invoices\InvoiceIteratorAggregate([
     new \App\Iterators\Invoices\Invoice(15),
