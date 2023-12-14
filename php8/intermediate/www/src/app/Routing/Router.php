@@ -10,18 +10,31 @@ class Router
       private array $routes = [];
 
 
-      public function register(string $route, callable|array $action): self
+      public function map(string $method, string $route, callable|array $action): self
       {
-          $this->routes[$route] = $action;
+          $this->routes[$method][$route] = $action;
 
           return $this;
       }
 
 
-      public function resolve(string $requestUri): mixed
+      public function get(string $route, callable|array $action): self
+      {
+          return $this->map('get', $route, $action);
+      }
+
+
+      public function post(string $route, callable|array $action): self
+      {
+          return $this->map('post', $route, $action);
+      }
+
+
+
+      public function resolve(string $requestUri, string $requestMethod): mixed
       {
           $route  = explode('?', $requestUri)[0];
-          $action = $this->routes[$route] ?? null;
+          $action = $this->routes[$requestMethod][$route] ?? null;
 
           if (! $action) {
               throw new RouteNotfoundException();

@@ -5,12 +5,12 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 $router = new \App\Routing\Router();
 
-$router->register('/', function () {
+$router->map('/', function () {
     return 'HomeController';
 });
 
 
-$router->register('/invoices', function () {
+$router->map('/invoices', function () {
     return 'Invoices';
 });
 
