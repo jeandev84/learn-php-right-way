@@ -52,7 +52,7 @@ class InvoiceServiceTest extends TestCase
             $emailServiceMock
                 ->expects($this->once())
                 ->method('send')
-                ->with($customer, 'receipt');
+                ->with($customer, 'receipt'); // arguments methods send() from EmailService
 
             // given invoice service
             $invoiceService = new InvoiceService(
