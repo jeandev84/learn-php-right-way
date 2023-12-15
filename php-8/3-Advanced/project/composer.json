@@ -5,6 +5,11 @@
             "Framework\\": "framework/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "require": {
         "symfony/var-dumper": "6.0.3",
         "ramsey/uuid": "^4.7",
