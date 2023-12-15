@@ -31,6 +31,20 @@ class Router
 
 
 
+      public function put(string $route, callable|array $action): self
+      {
+          return $this->register('PUT', $route, $action);
+      }
+
+
+
+    public function delete(string $route, callable|array $action): self
+    {
+        return $this->register('DELETE', $route, $action);
+    }
+
+
+
       public function resolve(string $requestUri, string $requestMethod): mixed
       {
           $route  = explode('?', $requestUri)[0];
