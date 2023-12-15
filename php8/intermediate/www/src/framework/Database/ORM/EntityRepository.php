@@ -49,7 +49,7 @@ class EntityRepository
     }
 
 
-    public function insert(array $data): bool
+    public function insert(array $data): int
     {
          $columns = join(', ', array_keys($data));
          $valuesQ = [];
@@ -60,7 +60,7 @@ class EntityRepository
 
          $status = $this->executeStatement("INSERT INTO $this->tableName ($columns) VALUES ($values)", $data);
 
-         return $status ? (int)$this->pdo->lastInsertId() : false;
+         return (int)($status ? $this->pdo->lastInsertId() : 0);
     }
 
 

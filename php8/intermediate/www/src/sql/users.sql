@@ -29,7 +29,7 @@ WHERE is_active = 0
 ORDER BY created_at DESC;
 */
 
-
+ALTER TABLE users ADD COLUMN updated_at DATETIME DEFAULT NULL;
 
 
 

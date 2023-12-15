@@ -18,18 +18,33 @@ class HomeController
          try {
              $pdo = Connection::make();
              $repository = new UserRepository($pdo);
+
+             /*
              $users = $repository->findAll();
              $user  = $repository->findByEmail($_GET['email'] ?? 'john@doe.com');
              # dd($user);
 
              $id = $repository->insert([
-                 'email' => $_GET['email'] ?? 'some@email.com',
+                 'email' => $_GET['email'] ?? 'some1@email.com',
                  'full_name' => 'John Doe',
                  'is_active' => 1,
                  'created_at' => date('Y-m-d H:i:s', strtotime('07/11/2021 9:00PM'))
              ]);
 
              dd($id);
+
+             $user = $repository->find(6);
+             dd($user);
+             */
+
+             $date = date('Y-m-d H:i:s', strtotime('07/11/2021 9:00PM'));
+             $id = $repository->insert([
+                 'email'       => $_GET['email'] ?? 'some2@email.com',
+                 'full_name'   => 'John Doe',
+                 'is_active'   => 1,
+                 'created_at'  => $date,
+                 'updated_at'  => $date
+             ]);
 
          } catch (PDOException $e) {
              throw new PDOException($e->getMessage());
