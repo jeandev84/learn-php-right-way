@@ -20,8 +20,8 @@ class HomeController
 
      public function index(): View
      {
-         $email  = 'john@brown.com';
-         $name   = 'John Brown';
+         $email  = 'john1@brown.com';
+         $name   = 'John Brown1';
          $amount = 25;
 
          $userModel    = new User();
