@@ -21,7 +21,7 @@ class ServerRequest
      public Cookie $cookies;
      public FileBag $files;
 
-     public function __construct(string $method, string $uri, string $protocol = '')
+     public function __construct(string $method, string $uri, string $protocol = '', array $headers = [])
      {
          $this->withMethod($method);
          $this->withUri(new Uri($uri));
@@ -29,7 +29,7 @@ class ServerRequest
          $this->queries  = new InputBag();
          $this->request  = new InputBag();
          $this->server   = new ServerBag();
-         $this->headers  = new RequestHeadersBag();
+         $this->headers  = new RequestHeadersBag($headers);
          $this->files    = new FileBag();
          $this->cookies  = new Cookie();
      }
@@ -184,6 +184,23 @@ class ServerRequest
     }
 
 
+
+
+    public function getHeaderParams(): array
+    {
+        return $this->headers->all();
+    }
+
+
+
+
+
+    public function withHeaderParams(array $headers): static
+    {
+        $this->headers->add($headers);
+
+        return $this;
+    }
 
 
 
