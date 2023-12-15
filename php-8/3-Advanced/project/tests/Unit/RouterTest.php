@@ -80,13 +80,25 @@ class RouterTest extends TestCase
        }
 
 
+
+        public function routeNotFoundCases(): array
+        {
+            return [
+                ['/users', 'PUT'],
+                ['/invoices', 'POST'],
+                ['/users', 'GET'],
+                ['/users', 'POST'],
+            ];
+        }
+
+
        /**
         * @param string $requestUri
         * @param string $requestMethod
         * @return void
         * @throws RouteNotfoundException
         *
-        * @dataProvider \Tests\DataProviders\RouterDataProvider::routeNotFoundCases()
+        * @dataProvider routeNotFoundCases()
        */
        public function test_it_throws_route_not_found_exception(
            string $requestUri,
