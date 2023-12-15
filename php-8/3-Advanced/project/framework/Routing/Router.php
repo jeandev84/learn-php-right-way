@@ -63,7 +63,7 @@ class Router
       /**
        * @return array
       */
-      public function getRoutes(): array
+      public function routes(): array
       {
           return $this->routes;
       }
