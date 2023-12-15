@@ -13,7 +13,8 @@ class PdoConnection
 
 
      private array $options = [
-         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
+         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+         PDO::ATTR_EMULATE_PREPARES => false
      ];
 
 
