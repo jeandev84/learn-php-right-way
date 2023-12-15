@@ -12,7 +12,8 @@ define('STORAGE_PATH', __DIR__.'/../storage');
 define('VIEW_PATH', __DIR__.'/../views');
 
 
-$router = new \Framework\Routing\Router();
+$container = new \Framework\Container\Container();
+$router    = new \Framework\Routing\Router($container);
 
 $router->get('/', [\App\Controllers\HomeController::class, 'index'])
     ->get('/download', [\App\Controllers\HomeController::class, 'download'])

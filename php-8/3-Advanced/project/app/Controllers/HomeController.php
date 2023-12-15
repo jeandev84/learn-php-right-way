@@ -20,9 +20,14 @@ use PDOException;
 class HomeController
 {
 
-     public function index(): View
+    public function __construct(protected  InvoiceService $invoiceService)
+    {
+    }
+
+
+    public function index(): View
      {
-         (new Container())->get(InvoiceService::class)->process([], 25);
+         $this->invoiceService->process([], 25);
 
          return View::make('index');
      }
