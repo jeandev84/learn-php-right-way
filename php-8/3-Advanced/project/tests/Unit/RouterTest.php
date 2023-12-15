@@ -8,7 +8,9 @@ use PHPUnit\Framework\TestCase;
 
 class RouterTest extends TestCase
 {
-       public function testRouteRegister(): void
+
+       /** @test */
+       public function it_registers_a_route(): void
        {
            // given that we have a router object
            $router = new Router();
@@ -25,4 +27,45 @@ class RouterTest extends TestCase
            // then we assert route was registered
            $this->assertEquals($expected, $router->routes());
        }
+
+
+
+       public function test_it_registers_a_get_route()
+       {
+           // given that we have a router object
+           $router = new Router();
+
+           // when we call a register method
+           $router->get('/users', ['Users', 'index']);
+
+           $expected = [
+               'GET' => [
+                   '/users' => ['Users', 'index']
+               ]
+           ];
+
+           // then we assert route was registered
+           $this->assertEquals($expected, $router->routes());
+       }
+
+
+
+       public function test_it_registers_a_post_route()
+       {
+           // given that we have a router object
+           $router = new Router();
+
+           // when we call a register method
+           $router->post('/users', ['Users', 'store']);
+
+           $expected = [
+               'POST' => [
+                   '/users' => ['Users', 'store']
+               ]
+           ];
+
+           // then we assert route was registered
+           $this->assertEquals($expected, $router->routes());
+       }
+
 }
