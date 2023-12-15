@@ -4,27 +4,29 @@ declare(strict_types=1);
 namespace Framework;
 
 use App\Connection;
+use Framework\Config\Config;
+use Framework\Database\DB;
 use Framework\Http\Request\Request;
 use Framework\Routing\Router;
 use Framework\Routing\Exceptions\RouteNotfoundException;
-use PDO;
 
 
 class App
 {
-     private static PDO $db;
+     private static DB $db;
 
      /**
       * @param Router $router
+      * @param Config $config
      */
-     public function __construct(protected Router $router, protected array $config)
+     public function __construct(protected Router $router, protected Config $config)
      {
-         static::$db = Connection::make();
+         static::$db = new DB($config->db ?? []);
      }
 
 
 
-     public static function db(): PDO
+     public static function db(): DB
      {
          return static::$db;
      }
