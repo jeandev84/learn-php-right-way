@@ -15,9 +15,9 @@ class View
      }
 
 
-     /**
-      * @return string
-      * @throws ViewNotFoundException
+      /**
+       * @return string
+       * @throws ViewNotFoundException
      */
      public function render(): string
      {
@@ -26,6 +26,12 @@ class View
           if (! file_exists($viewPath)) {
               throw new ViewNotFoundException();
           }
+
+          /*
+          foreach ($this->params as $key => $value) {
+             $$key = $value;
+          }
+          */
 
           extract($this->params);
           ob_start();
@@ -42,5 +48,11 @@ class View
      public function __toString(): string
      {
          return $this->render();
+     }
+
+
+     public function __get(string $name): mixed
+     {
+         return $this->params[$name] ?? null;
      }
 }

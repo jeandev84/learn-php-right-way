@@ -11,7 +11,7 @@ class HomeController
 
      public function index(): View
      {
-         return View::make('index', $_GET);
+         return View::make('index', ['foo' => 'bar']);
 
      }
 

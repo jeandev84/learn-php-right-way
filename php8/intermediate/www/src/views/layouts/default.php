@@ -8,9 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/invoices/create" method="post">
-        <label>Amount</label>
-        <input type="text" name="amount">
-    </form>
+    {{ content }}
 </body>
 </html>
