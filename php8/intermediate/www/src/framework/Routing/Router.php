@@ -20,13 +20,13 @@ class Router
 
       public function get(string $route, callable|array $action): self
       {
-          return $this->register('get', $route, $action);
+          return $this->register('GET', $route, $action);
       }
 
 
       public function post(string $route, callable|array $action): self
       {
-          return $this->register('post', $route, $action);
+          return $this->register('POST', $route, $action);
       }
 
 

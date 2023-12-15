@@ -7,6 +7,7 @@ namespace App\Controllers;
 use App\Connection;
 use App\Repository\InvoiceRepository;
 use App\Repository\UserRepository;
+use Framework\App;
 use Framework\Templating\View;
 use PDO;
 use PDOException;
@@ -16,7 +17,8 @@ class HomeController
 
      public function index(): View
      {
-         $pdo = Connection::make();
+         $pdo = App::db();
+
          try {
              $userRepository    = new UserRepository($pdo);
              $invoiceRepository = new InvoiceRepository($pdo);

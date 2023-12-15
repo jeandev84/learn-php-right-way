@@ -41,7 +41,7 @@ class ServerRequest
      */
      public function getMethod(): string
      {
-         return $this->method;
+         return strtoupper($this->method);
      }
 
 
