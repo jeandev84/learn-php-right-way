@@ -28,7 +28,7 @@ class PdoConnection
          try {
              $this->pdo = new PDO($dsn, $username, $password, $this->options($options));
          } catch (PDOException $e) {
-             throw new PDOException($e->getMessage(), $e->getCode());
+             throw new PDOException($e->getMessage(), (int)$e->getCode());
          }
      }
 
@@ -50,12 +50,31 @@ class PdoConnection
      }
 
 
+     public function createQuery(): Query
+     {
+         return new Query($this->getPdo());
+     }
 
      public function statement(string $sql): Query
      {
-         return (new Query($this->getPdo()))->prepare($sql);
+         return $this->createQuery()->prepare($sql);
      }
 
+
+     public function transaction(\Closure $func) {
+
+          $this->pdo->beginTransaction();
+
+          try {
+             $func($this);
+             $this->pdo->commit();
+          } catch (PDOException $e) {
+              if ($this->pdo->inTransaction()) {
+                  $this->pdo->rollBack();
+              }
+              throw $e;
+          }
+     }
 
 
     private function options(array $options)
