@@ -133,6 +133,8 @@ class RouterTest extends TestCase
 
            $this->router->get('/users', [$users::class, 'index']);
 
+           // assertEquals => == comparison
+           // assertSame => === comparison
            $this->assertEquals(
                [1, 2, 3],
                $this->router->resolve('/users', 'GET')
