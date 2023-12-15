@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class RouterTest extends TestCase
 {
-       public function test_that_it_registers_a_route(): void
+       public function testRouteRegister(): void
        {
            // given that we have a router object
            $router = new Router();
