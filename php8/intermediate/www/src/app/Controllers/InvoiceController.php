@@ -2,23 +2,19 @@
 
 namespace App\Controllers;
 
+use Framework\Templating\View;
+
 class InvoiceController
 {
-    public function index(): string
+    public function index(): View
     {
-        # dump($_SESSION);
-        # setcookie('userName', 'Brown', time() - (24 * 60 * 60));
-        return 'Invoices';
+        return View::make('invoices/index');
     }
 
 
-    public function create(): string
+    public function create(): View
     {
-        return '<form action="/invoices/create" method="post">
-                   <label>Amount</label>
-                   <input type="text" name="amount">
-                   </form>
-                ';
+        return View::make('invoices/create');
     }
 
 
