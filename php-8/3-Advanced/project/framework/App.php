@@ -19,8 +19,6 @@ use Framework\Routing\Exceptions\RouteNotfoundException;
 class App
 {
      private static DB $db;
-     private static Container $container;
-
 
      /**
       * @param Router $router
@@ -29,22 +27,6 @@ class App
      public function __construct(protected Router $router, protected Config $config)
      {
          static::$db = new DB($config->db ?? []);
-         static::$container = new Container();
-
-         static::$container->set(
-              InvoiceService::class,
-              function (Container $c) {
-                  return new InvoiceService(
-                      $c->get(SalesTaxService::class),
-                      $c->get(PaymentGatewayService::class),
-                      $c->get(EmailService::class)
-                  );
-              }
-         );
-
-         static::$container->set(SalesTaxService::class, fn() => new SalesTaxService());
-         static::$container->set(PaymentGatewayService::class, fn() => new PaymentGatewayService());
-         static::$container->set(EmailService::class, fn() => new EmailService());
      }
 
 
