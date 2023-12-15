@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
 # install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN docker-php-ext-install pdo pdo_mysql
 
 # directory where our project
 WORKDIR /var/www

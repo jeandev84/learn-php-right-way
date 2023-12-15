@@ -21,7 +21,7 @@ MODIFY full_name varchar(150);
 
 
 insert into users(email, full_name, is_active, created_at)
-values ('john@doecom', 'John Doe', 1, NOW()), ('jane@doecom', 'Jane Doe', 1, NOW());
+values ('john@doe.com', 'John Doe', 1, NOW()), ('jane@doe.com', 'Jane Doe', 1, NOW());
 
 SELECT id, email
 FROM users
