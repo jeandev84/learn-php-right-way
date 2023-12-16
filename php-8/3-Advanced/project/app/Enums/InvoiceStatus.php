@@ -23,6 +23,8 @@ use App\Enums\Traits\InvoiceStatusHelper;
 // Enum Class Attributes : Attribute::TARGET_CLASS
 // Enum Case Attributes  : Attribute::TARGET_CLASS_CONSTANT
 
+// https://www.php.net/manual/en/class.unitenum.php (UnitEnum Interface)
+
 
 enum InvoiceStatus: int implements SomeInterface
 {
