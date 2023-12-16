@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Enums\Color;
 use App\Enums\InvoiceStatus;
 use App\Models\Invoice;
 use App\Services\InvoiceService;
@@ -19,6 +20,8 @@ class InvoiceController
     #[Get('/invoices')]
     public function index(): View
     {
+        var_dump(InvoiceStatus::fromColor(Color::Green));
+
         $invoices = (new Invoice())->all(InvoiceStatus::Paid);
 
         return View::make('invoices/index', [

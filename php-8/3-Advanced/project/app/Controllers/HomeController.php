@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Services\InvoiceService;
+use Framework\Routing\Attributes\Enums\HttpMethod;
 use Framework\Routing\Attributes\Route;
 use Framework\Routing\Attributes\Get;
 use Framework\Routing\Attributes\Post;
@@ -26,7 +27,7 @@ class HomeController
      // #[Route('/')]
      #[Get('/')]
      // #[Get(path: '/home')]
-     #[Route('/home', 'HEAD')]
+     #[Route('/home', HttpMethod::Head)]
      #[Post(path: '/home')]
      public function index(): View
      {

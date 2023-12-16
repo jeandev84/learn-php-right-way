@@ -30,7 +30,7 @@ class Router
 
                    foreach ($attributes as $attribute) {
                        $route = $attribute->newInstance(); // Route
-                       $this->register($route->method, $route->path, [$controller, $method->getName()]);
+                       $this->register($route->method->value, $route->path, [$controller, $method->getName()]);
                    }
                }
            }
