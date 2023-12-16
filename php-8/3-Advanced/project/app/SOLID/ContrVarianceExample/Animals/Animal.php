@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\ContrVarianceExample\Animals;
+namespace App\SOLID\ContrVarianceExample\Animals;
 
 abstract class Animal
 {

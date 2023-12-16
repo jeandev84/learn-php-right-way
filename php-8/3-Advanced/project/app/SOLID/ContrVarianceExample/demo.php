@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-use App\ContrVarianceExample\Animals\AnimalFood;
-use App\ContrVarianceExample\Animals\Cat\CatShelter;
-use App\ContrVarianceExample\Animals\Dog\DogShelter;
+use App\SOLID\ContrVarianceExample\Animals\AnimalFood;
+use App\SOLID\ContrVarianceExample\Animals\Cat\CatShelter;
+use App\SOLID\ContrVarianceExample\Animals\Dog\DogShelter;
 
 
 $kitty = (new CatShelter())->adopt("Ricky");
@@ -19,6 +19,6 @@ $doggy = (new DogShelter())->adopt("Mavrick");
 $doggy->speak();
 echo PHP_EOL;
 
-$banana = new \App\ContrVarianceExample\Animals\Food();
+$banana = new \App\SOLID\ContrVarianceExample\Animals\Food();
 $doggy->eat($banana);
 

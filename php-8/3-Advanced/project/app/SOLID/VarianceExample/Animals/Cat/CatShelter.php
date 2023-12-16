@@ -1,10 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\ContrVarianceExample\Animals\Cat;
+namespace App\SOLID\VarianceExample\Animals\Cat;
 
-use App\ContrVarianceExample\Animals\Animal;
-use App\ContrVarianceExample\Animals\AnimalShelter;
+use App\SOLID\VarianceExample\Animals\AnimalShelter;
 
 class CatShelter implements AnimalShelter
 {

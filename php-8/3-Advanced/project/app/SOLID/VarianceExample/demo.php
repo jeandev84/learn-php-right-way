@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-use App\VarianceExample\Animals\Cat\CatShelter;
-use App\VarianceExample\Animals\Dog\DogShelter;
+use App\SOLID\VarianceExample\Animals\Cat\CatShelter;
+use App\SOLID\VarianceExample\Animals\Dog\DogShelter;
 
 
 $kitty = (new CatShelter())->adopt("Ricky");

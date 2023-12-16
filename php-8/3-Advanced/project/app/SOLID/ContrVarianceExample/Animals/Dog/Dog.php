@@ -1,9 +1,9 @@
 <?php
 
-namespace App\ContrVarianceExample\Animals\Dog;
+namespace App\SOLID\ContrVarianceExample\Animals\Dog;
 
-use App\ContrVarianceExample\Animals\Animal;
-use App\ContrVarianceExample\Animals\AnimalFood;
+use App\ContrVarianceExample\Animals\Dog\Food;
+use App\SOLID\ContrVarianceExample\Animals\Animal;
 
 class Dog extends Animal
 {

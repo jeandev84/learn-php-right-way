@@ -1,7 +1,12 @@
 <?php
 
+use App\Controllers\GeneratorExampleController;
+use App\Controllers\HomeController;
+use Framework\App;
 use Framework\Config\Config;
+use Framework\Container\Container;
 use Framework\Http\Request\Request;
+use Framework\Routing\Router;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
@@ -12,15 +17,15 @@ define('STORAGE_PATH', __DIR__.'/../storage');
 define('VIEW_PATH', __DIR__.'/../views');
 
 
-$container = new \Framework\Container\Container();
-$router    = new \Framework\Routing\Router($container);
+$container = new Container();
+$router    = new Router($container);
 
-$router->get('/', [\App\Controllers\HomeController::class, 'index'])
-       ->get('/examples/generator', [\App\Controllers\GeneratorExampleController::class, 'index'])
+$router->get('/', [HomeController::class, 'index'])
+       ->get('/examples/generator', [GeneratorExampleController::class, 'index'])
 ;
 
 $request = Request::createFromGlobals();
-(new \Framework\App($container, $router, new Config($_ENV)))
+(new App($container, $router, new Config($_ENV)))
 ->run($request);
 
 
