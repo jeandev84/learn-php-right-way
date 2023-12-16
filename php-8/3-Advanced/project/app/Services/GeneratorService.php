@@ -61,6 +61,7 @@ class GeneratorService
          yield $start;
          echo 'World';
          yield $end;
+         echo '!';
     }
 
 
