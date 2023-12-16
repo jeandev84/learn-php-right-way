@@ -2,39 +2,18 @@
 
 namespace App\Controllers;
 
+use App\Services\GeneratorService;
 use Generator;
 
 class GeneratorExampleController
 {
 
-      public function __construct()
+      public function __construct(protected GeneratorService $generatorService)
       {
       }
 
       public function index()
       {
-         /* $numbers = range(1, 100); */
-
-          $numbers = $this->lazyRange(1, 3000000);
-
-          echo $numbers->current();
-          $numbers->next();
-          echo $numbers->current();
-          $numbers->next();
-          echo $numbers->current();
-      }
-
-
-      /**
-       * @param int $start
-       * @param int $end
-       * @return Generator
-      */
-      private function lazyRange(int $start, int $end): Generator
-      {
-          echo 'Hello!';
-          for ($i = $start; $i <= $end; $i++) {
-             yield $i;
-          }
+          $this->generatorService->loopNumbers(1, 10);
       }
 }

@@ -41,9 +41,22 @@ class GeneratorService
     }
 
 
+    public function loopNumbers(int $start, int $end): void
+    {
+        $numbers = $this->lazyRange($start, $end);
+
+        foreach ($numbers as $key => $value) {
+            echo '<div>'. $key . ': '. $value . '</div>';
+        }
+    }
+
+
+
 
     public function exampleUseLazyRange(): void
     {
+        /* $numbers = range(1, 100); */
+
         $numbers = $this->lazyRange(1, 3000000);
 
         echo $numbers->current();
@@ -61,7 +74,7 @@ class GeneratorService
          yield $start;
          echo 'World';
          yield $end;
-         echo '!';
+         return '!';
     }
 
 
@@ -75,5 +88,7 @@ class GeneratorService
         echo $numbers->current();
         $numbers->next();
         echo $numbers->current();
+        $numbers->next();
+        echo $numbers->getReturn();
     }
 }
