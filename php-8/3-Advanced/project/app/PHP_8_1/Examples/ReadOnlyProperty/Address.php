@@ -9,7 +9,7 @@ class Address
         public readonly string $city,
         public readonly string $state,
         public readonly string $postalCode,
-        public readonly string $country
+        public readonly string $country = 'US'
     )
     {
 
