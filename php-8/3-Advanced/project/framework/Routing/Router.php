@@ -26,7 +26,7 @@ class Router
                    // get all attributes associated to the method
                    /* $attributes = $method->getAttributes(); returns all stuff attributes */
                    // filter attributes and get only Route
-                   $attributes = $method->getAttributes(Route::class);
+                   $attributes = $method->getAttributes(Route::class, \ReflectionAttribute::IS_INSTANCEOF);
 
                    foreach ($attributes as $attribute) {
                        $route = $attribute->newInstance(); // Route

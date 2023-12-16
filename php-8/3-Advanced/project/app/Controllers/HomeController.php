@@ -5,9 +5,9 @@ namespace App\Controllers;
 
 use App\Services\InvoiceService;
 use Framework\Routing\Attributes\Route;
-use Framework\Routing\Attributes\Methods\Get;
-use Framework\Routing\Attributes\Methods\Post;
-use Framework\Routing\Attributes\Methods\Put;
+use Framework\Routing\Attributes\Get;
+use Framework\Routing\Attributes\Post;
+use Framework\Routing\Attributes\Put;
 use Framework\Templating\View;
 
 class HomeController

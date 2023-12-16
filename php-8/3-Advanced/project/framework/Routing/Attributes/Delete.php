@@ -1,8 +1,8 @@
 <?php
+declare(strict_types=1);
 
-namespace Framework\Routing\Attributes\Methods;
+namespace Framework\Routing\Attributes;
 
-use Framework\Routing\Attributes\Route;
 use Attribute;
 
 #[Attribute]
