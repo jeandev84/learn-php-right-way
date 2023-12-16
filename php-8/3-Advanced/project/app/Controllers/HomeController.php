@@ -13,6 +13,11 @@ use Framework\Templating\View;
 class HomeController
 {
 
+    // #[Get('/')]
+    // private int $x;
+
+
+
     public function __construct(protected  InvoiceService $invoiceService)
     {
     }

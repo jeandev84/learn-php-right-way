@@ -108,4 +108,34 @@ class Router
       {
           return $this->routes;
       }
+
+
+     /*
+     public function registerRoutesFromControllerAttributesDemoWithPropertyX(array $controllers)
+     {
+        foreach ($controllers as $controller) {
+            $reflectionController = new \ReflectionClass($controller);
+
+            // For validation property
+            $property = $reflectionController->getProperty('x');
+            $attributes = $property->getAttributes(Route::class, \ReflectionAttribute::IS_INSTANCEOF);
+            foreach ($attributes as $attribute) {
+                $route = $attribute->newInstance(); // Route
+                dump($route);
+            }
+
+            foreach ($reflectionController->getMethods() as $method) {
+                // get all attributes associated to the method
+                // $attributes = $method->getAttributes(); returns all stuff attributes
+                // filter attributes and get only Route
+                $attributes = $method->getAttributes(Route::class, \ReflectionAttribute::IS_INSTANCEOF);
+
+                foreach ($attributes as $attribute) {
+                    $route = $attribute->newInstance(); // Route
+                    $this->register($route->method, $route->path, [$controller, $method->getName()]);
+                }
+            }
+        }
+     }
+     */
 }
