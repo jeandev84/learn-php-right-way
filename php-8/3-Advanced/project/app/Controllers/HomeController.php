@@ -25,7 +25,9 @@ class HomeController
 
      // #[Route('/')]
      #[Get('/')]
-     #[Get(path: '/home')]
+     // #[Get(path: '/home')]
+     #[Route('/home', 'HEAD')]
+     #[Post(path: '/home')]
      public function index(): View
      {
          $this->invoiceService->process([], 25);
