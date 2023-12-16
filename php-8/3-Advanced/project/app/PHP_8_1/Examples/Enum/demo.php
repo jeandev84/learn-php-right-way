@@ -9,10 +9,12 @@ var_dump(PaymentStatus::PAID);
 $payment->updateStatus(PaymentStatus::DECLINED);
 
 echo $payment->status()->name . PHP_EOL;
+echo $payment->status()->value . PHP_EOL;
 echo $payment->status()->text() . PHP_EOL;
 
 $payment->updateStatus(PaymentStatus::PAID);
 
 echo $payment->status()->name . PHP_EOL;
+echo $payment->status()->value . PHP_EOL;
 echo $payment->status()->text() . PHP_EOL;
 
