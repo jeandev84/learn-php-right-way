@@ -54,7 +54,7 @@ class GeneratorService
     }
 
 
-    public function loopNumbers(int $start, int $end): void
+    public function loopNumbersFor(int $start, int $end): void
     {
         # $numbers = $this->lazyRange($start, $end);
         $numbers = $this->lazyRangeMultiplyByFive($start, $end);

@@ -5,6 +5,7 @@ namespace Framework\Database\ORM;
 
 use Framework\App;
 use Framework\Database\DB;
+use Generator;
 
 abstract class Model
 {
@@ -14,4 +15,12 @@ abstract class Model
      {
          $this->db = App::db();
      }
+
+
+    public function fetchLazy(PDOStatement $stmt): Generator
+    {
+        foreach($stmt as $record) {
+            yield $record;
+        }
+    }
 }
