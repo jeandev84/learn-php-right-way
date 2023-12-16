@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Ticket;
 use App\Services\GeneratorService;
+use Framework\Routing\Attributes\Route;
 use Generator;
 
 class GeneratorExampleController
@@ -16,6 +17,8 @@ class GeneratorExampleController
       {
       }
 
+
+      #[Route('/examples/generator')]
       public function index()
       {
           /* $this->generatorService->loopNumbersFor(1, 10); */

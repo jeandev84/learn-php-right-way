@@ -28,10 +28,9 @@ $router->registerRoutesFromControllerAttributes(
     ]
 );
 
-/*
-$router->get('/', [HomeController::class, 'index'])
-       ->get('/examples/generator', [GeneratorExampleController::class, 'index']);
-*/
+
+dump($router->routes());
+
 
 $request = Request::createFromGlobals();
 (new App($container, $router, new Config($_ENV)))

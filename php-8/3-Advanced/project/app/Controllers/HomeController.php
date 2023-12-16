@@ -22,4 +22,20 @@ class HomeController
 
          return View::make('index');
      }
+
+
+
+    #[Route('/', 'POST')]
+    public function store()
+    {
+
+    }
+
+
+
+    #[Route('/', 'PUT')]
+    public function update()
+    {
+
+    }
 }
