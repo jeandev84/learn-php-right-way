@@ -5,7 +5,7 @@ namespace Framework\Routing\Attributes;
 
 use Attribute;
 
-#[Attribute]
+#[Attribute(Attribute::TARGET_METHOD|Attribute::IS_REPEATABLE)]
 class Put extends Route
 {
    public function __construct(string $path)
