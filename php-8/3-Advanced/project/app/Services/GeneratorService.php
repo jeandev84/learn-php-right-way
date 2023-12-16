@@ -41,9 +41,23 @@ class GeneratorService
     }
 
 
+    /**
+     * @param int $start
+     * @param int $end
+     * @return Generator
+    */
+    public function lazyRangeMultiplyByFive(int $start, int $end): Generator
+    {
+        for ($i = $start; $i <= $end; $i++) {
+            yield $i * 5 => $i;
+        }
+    }
+
+
     public function loopNumbers(int $start, int $end): void
     {
-        $numbers = $this->lazyRange($start, $end);
+        # $numbers = $this->lazyRange($start, $end);
+        $numbers = $this->lazyRangeMultiplyByFive($start, $end);
 
         foreach ($numbers as $key => $value) {
             echo '<div>'. $key . ': '. $value . '</div>';
