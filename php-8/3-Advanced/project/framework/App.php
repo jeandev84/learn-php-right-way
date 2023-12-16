@@ -3,30 +3,35 @@ declare(strict_types=1);
 
 namespace Framework;
 
-use App\Connection;
-use App\Services\EmailService;
-use App\Services\InvoiceService;
-use App\Services\PaymentGatewayService;
-use App\Services\SalesTaxService;
+use App\Services\Contract\PaymentGatewayInterface;
+use App\Services\Gateway\PaymentGateway;
+use App\Services\StripePayment;
 use Framework\Config\Config;
 use Framework\Container\Container;
 use Framework\Database\DB;
 use Framework\Http\Request\Request;
-use Framework\Routing\Router;
 use Framework\Routing\Exceptions\RouteNotfoundException;
+use Framework\Routing\Router;
 
 
 class App
 {
-     private static DB $db;
+      private static DB $db;
 
-     /**
-      * @param Router $router
-      * @param Config $config
+      /**
+       * @param Container $container
+       * @param Router $router
+       * @param Config $config
      */
-     public function __construct(protected Router $router, protected Config $config)
+     public function __construct(
+         protected Container $container,
+         protected Router $router,
+         protected Config $config
+     )
      {
          static::$db = new DB($config->db ?? []);
+
+         $this->container->bind(PaymentGatewayInterface::class, StripePayment::class);
      }
 
 

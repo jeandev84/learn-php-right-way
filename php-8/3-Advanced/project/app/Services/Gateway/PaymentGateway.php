@@ -1,10 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Services\Gateway;
 
-class PaymentGatewayService
+use App\Services\Contract\PaymentGatewayInterface;
+
+class PaymentGateway implements PaymentGatewayInterface
 {
+
+      /**
+       * @inheritdoc
+      */
       public function charge(array $customer, float $amount, float $tax): bool
       {
           # sleep(1);

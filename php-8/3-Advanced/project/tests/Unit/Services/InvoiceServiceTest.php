@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace Tests\Unit\Services;
 
 use App\Services\EmailService;
+use App\Services\Gateway\PaymentGateway;
 use App\Services\InvoiceService;
-use App\Services\PaymentGatewayService;
 use App\Services\SalesTaxService;
 use PHPUnit\Framework\TestCase;
 
@@ -15,7 +15,7 @@ class InvoiceServiceTest extends TestCase
        {
              // Mocks
              $salesTaxServiceMock = $this->createMock(SalesTaxService::class);
-             $gatewayServiceMock  = $this->createMock(PaymentGatewayService::class);
+             $gatewayServiceMock  = $this->createMock(PaymentGateway::class);
              $emailServiceMock    = $this->createMock(EmailService::class);
 
              $gatewayServiceMock->method('charge')->willReturn(true);
@@ -44,7 +44,7 @@ class InvoiceServiceTest extends TestCase
       {
             $customer = ['name' => 'Gio'];
             $salesTaxServiceMock = $this->createMock(SalesTaxService::class);
-            $gatewayServiceMock  = $this->createMock(PaymentGatewayService::class);
+            $gatewayServiceMock  = $this->createMock(PaymentGateway::class);
             $emailServiceMock    = $this->createMock(EmailService::class);
 
             $gatewayServiceMock->method('charge')->willReturn(true);

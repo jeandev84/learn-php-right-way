@@ -24,16 +24,7 @@ $router->get('/', [\App\Controllers\HomeController::class, 'index'])
 ;
 
 $request = Request::createFromGlobals();
-(new \Framework\App($router, new Config($_ENV)))
+(new \Framework\App($container, $router, new Config($_ENV)))
 ->run($request);
-/*
-(new \Framework\App($router, [
-    'driver'   => $_ENV['DB_DRIVER'] ?? 'mysql',
-    'host'     => $_ENV['DB_HOST'],
-    'user'     => $_ENV['DB_USER'],
-    'pass'     => $_ENV['DB_PASS'],
-    'database' => $_ENV['DB_DATABASE']
-]))
-->run($request);
-*/
+
 
