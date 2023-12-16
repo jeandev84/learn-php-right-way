@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Framework\Routing;
 
 use Framework\Container\Container;
+use Framework\Routing\Attributes\Route;
 use Framework\Routing\Exceptions\RouteNotfoundException;
 
 class Router
@@ -15,6 +16,25 @@ class Router
 
       }
 
+
+      public function registerRoutesFromControllerAttributes(array $controllers)
+      {
+           foreach ($controllers as $controller) {
+               $reflectionController = new \ReflectionClass($controller);
+
+               foreach ($reflectionController->getMethods() as $method) {
+                   // get all attributes associated to the method
+                   /* $attributes = $method->getAttributes(); returns all stuff attributes */
+                   // filter attributes and get only Route
+                   $attributes = $method->getAttributes(Route::class);
+
+                   foreach ($attributes as $attribute) {
+                       $route = $attribute->newInstance(); // Route
+                       $this->register($route->method, $route->path, [$controller, $method->getName()]);
+                   }
+               }
+           }
+      }
 
 
       public function register(string $method, string $route, callable|array $action): self

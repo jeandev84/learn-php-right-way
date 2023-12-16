@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-
 use App\Services\InvoiceService;
+use Framework\Routing\Attributes\Route;
 use Framework\Templating\View;
 
 class HomeController
@@ -15,7 +15,8 @@ class HomeController
     }
 
 
-    public function index(): View
+     #[Route('/')]
+     public function index(): View
      {
          $this->invoiceService->process([], 25);
 

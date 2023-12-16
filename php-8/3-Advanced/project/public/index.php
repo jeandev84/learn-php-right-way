@@ -20,9 +20,18 @@ define('VIEW_PATH', __DIR__.'/../views');
 $container = new Container();
 $router    = new Router($container);
 
+
+$router->registerRoutesFromControllerAttributes(
+    [
+      HomeController::class,
+      GeneratorExampleController::class
+    ]
+);
+
+/*
 $router->get('/', [HomeController::class, 'index'])
-       ->get('/examples/generator', [GeneratorExampleController::class, 'index'])
-;
+       ->get('/examples/generator', [GeneratorExampleController::class, 'index']);
+*/
 
 $request = Request::createFromGlobals();
 (new App($container, $router, new Config($_ENV)))
