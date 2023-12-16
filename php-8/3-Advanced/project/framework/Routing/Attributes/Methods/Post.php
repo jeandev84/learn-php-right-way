@@ -3,7 +3,7 @@
 namespace Framework\Routing\Attributes\Methods;
 
 use Framework\Routing\Attributes\Route;
-
+use Attribute;
 
 #[Attribute]
 class Post extends Route

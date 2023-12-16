@@ -5,6 +5,9 @@ namespace App\Controllers;
 
 use App\Services\InvoiceService;
 use Framework\Routing\Attributes\Route;
+use Framework\Routing\Attributes\Methods\Get;
+use Framework\Routing\Attributes\Methods\Post;
+use Framework\Routing\Attributes\Methods\Put;
 use Framework\Templating\View;
 
 class HomeController
@@ -15,7 +18,8 @@ class HomeController
     }
 
 
-     #[Route('/')]
+     // #[Route('/')]
+     #[Get('/')]
      public function index(): View
      {
          $this->invoiceService->process([], 25);
@@ -25,7 +29,8 @@ class HomeController
 
 
 
-    #[Route('/', 'POST')]
+    // #[Route('/', 'POST')]
+    #[Post('/')]
     public function store()
     {
 
@@ -33,7 +38,8 @@ class HomeController
 
 
 
-    #[Route('/', 'PUT')]
+    // #[Route('/', 'PUT')]
+    #[Put('/')]
     public function update()
     {
 
