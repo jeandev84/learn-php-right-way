@@ -1,5 +1,6 @@
 use my_db;
 
+/*
 drop table if exists  invoices;
 create table if not exists invoices(
    id int unsigned PRIMARY KEY AUTO_INCREMENT,
@@ -16,3 +17,13 @@ select i.id, i.amount, u.full_name
 FROM invoices i
 INNER JOIN users u ON i.user_id = u.id
 WHERE i.amount < 100;
+
+
+ALTER TABLE invoices
+ADD COLUMN invoice_number INTEGER DEFAULT 0;
+
+ALTER TABLE invoices
+ADD COLUMN status INTEGER DEFAULT 1;
+*/
+
+

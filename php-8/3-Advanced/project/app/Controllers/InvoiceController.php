@@ -2,7 +2,10 @@
 
 namespace App\Controllers;
 
+use App\Enums\InvoiceStatus;
+use App\Models\Invoice;
 use App\Services\InvoiceService;
+use Framework\Routing\Attributes\Get;
 use Framework\Templating\View;
 
 class InvoiceController
@@ -13,9 +16,14 @@ class InvoiceController
     }
 
 
+    #[Get('/invoices')]
     public function index(): View
     {
-        return View::make('invoices/index');
+        $invoices = (new Invoice())->all(InvoiceStatus::Paid);
+
+        return View::make('invoices/index', [
+            'invoices' => $invoices
+        ]);
     }
 
 

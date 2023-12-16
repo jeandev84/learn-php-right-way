@@ -2,6 +2,7 @@
 
 use App\Controllers\GeneratorExampleController;
 use App\Controllers\HomeController;
+use App\Controllers\InvoiceController;
 use Framework\App;
 use Framework\Config\Config;
 use Framework\Container\Container;
@@ -24,12 +25,13 @@ $router    = new Router($container);
 $router->registerRoutesFromControllerAttributes(
     [
       HomeController::class,
-      GeneratorExampleController::class
+      GeneratorExampleController::class,
+      InvoiceController::class
     ]
 );
 
 
-dump($router->routes());
+/* dump($router->routes()); */
 
 
 $request = Request::createFromGlobals();
