@@ -16,11 +16,7 @@ $container = new \Framework\Container\Container();
 $router    = new \Framework\Routing\Router($container);
 
 $router->get('/', [\App\Controllers\HomeController::class, 'index'])
-    ->get('/download', [\App\Controllers\HomeController::class, 'download'])
-    ->post('/upload', [\App\Controllers\HomeController::class, 'upload'])
-    ->get('/invoices', [\App\Controllers\InvoiceController::class, 'index'])
-    ->get('/invoices/create', [\App\Controllers\InvoiceController::class, 'create'])
-    ->post('/invoices/create', [\App\Controllers\InvoiceController::class, 'store'])
+       ->get('/examples/generator', [\App\Controllers\GeneratorExampleController::class, 'index'])
 ;
 
 $request = Request::createFromGlobals();
