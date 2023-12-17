@@ -23,11 +23,13 @@ class App
        * @param Container $container
        * @param Config $config
        * @param Router|null $router
+       * @param array $request
      */
      public function __construct(
          protected Container $container,
          protected Config $config,
          protected ?Router $router = null,
+         protected array $request  = []
      )
      {
          static::$db = new DB($config->db ?? []);
@@ -44,12 +46,12 @@ class App
      }
 
 
-     public function run(Request $request)
+     public function run()
      {
          try {
              echo $this->router->resolve(
-                 $request->requestUri(),
-                 $request->getMethod()
+                 $this->request['uri'],
+                 $this->request['method']
              );
          } catch (RouteNotfoundException $e) {
              # header('HTTP/1.1 404 Not Found');
