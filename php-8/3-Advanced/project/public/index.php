@@ -3,6 +3,7 @@
 use App\Controllers\GeneratorExampleController;
 use App\Controllers\HomeController;
 use App\Controllers\InvoiceController;
+use App\Controllers\UserController;
 use Framework\App;
 use Framework\Config\Config;
 use Framework\Container\Container;
@@ -26,7 +27,8 @@ $router->registerRoutesFromControllerAttributes(
     [
       HomeController::class,
       GeneratorExampleController::class,
-      InvoiceController::class
+      InvoiceController::class,
+      UserController::class
     ]
 );
 

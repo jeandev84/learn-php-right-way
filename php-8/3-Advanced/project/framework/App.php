@@ -5,13 +5,14 @@ namespace Framework;
 
 use App\Services\Contract\PaymentGatewayInterface;
 use App\Services\Gateway\PaymentGateway;
-use App\Services\StripePayment;
 use Framework\Config\Config;
 use Framework\Container\Container;
 use Framework\Database\DB;
 use Framework\Http\Request\Request;
+use Framework\Mailer\Symfony\CustomMailer;
 use Framework\Routing\Exceptions\RouteNotfoundException;
 use Framework\Routing\Router;
+use Symfony\Component\Mailer\MailerInterface;
 
 
 class App
@@ -31,7 +32,8 @@ class App
      {
          static::$db = new DB($config->db ?? []);
 
-         $this->container->bind(PaymentGatewayInterface::class, StripePayment::class);
+         $this->container->bind(PaymentGatewayInterface::class, PaymentGateway::class);
+         $this->container->bind(MailerInterface::class, fn() => new CustomMailer($config->mailer['dsn']));
      }
 
 

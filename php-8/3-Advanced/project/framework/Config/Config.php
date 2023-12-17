@@ -5,6 +5,7 @@ namespace Framework\Config;
 
 /**
  * @property-read ?array $db
+ * @property-read ?array $mailer
 */
 class Config
 {
@@ -21,6 +22,9 @@ class Config
                 'pass'     => $env['DB_PASS'],
                 'database' => $env['DB_DATABASE'],
                 'driver'   => $env['DB_DRIVER'] ?? 'mysql',
+            ],
+            'mailer' => [
+                'dsn' => $env['MAILER_DSN']
             ]
         ];
     }

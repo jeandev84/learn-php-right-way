@@ -25,7 +25,7 @@ class RouterTest extends TestCase
 
        public function test_it_registers_a_route(): void
        {
-           // when we call a register method
+           // when we call a register.php method
            $this->router->register('GET', '/users', ['Users', 'index']);
 
            $expected = [
@@ -42,7 +42,7 @@ class RouterTest extends TestCase
 
        public function test_it_registers_a_get_route()
        {
-           // when we call a register method
+           // when we call a register.php method
            $this->router->get('/users', ['Users', 'index']);
 
            $expected = [
@@ -60,7 +60,7 @@ class RouterTest extends TestCase
        public function test_it_registers_a_post_route()
        {
 
-           // when we call a register method
+           // when we call a register.php method
            $this->router->post('/users', ['Users', 'store']);
 
            $expected = [
