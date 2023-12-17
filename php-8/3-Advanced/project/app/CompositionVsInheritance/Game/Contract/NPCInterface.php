@@ -2,7 +2,7 @@
 declare(strict_types=1);
 namespace App\CompositionVsInheritance\Game\Contract;
 
-interface AnimalInterface
+interface NPCInterface
 {
      public function attack();
 

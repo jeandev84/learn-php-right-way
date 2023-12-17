@@ -1,13 +1,11 @@
 <?php
-declare(strict_types=1);
 
-namespace App\CompositionVsInheritance\Game;
+namespace App\CompositionVsInheritance\Game\Abstracts;
 
-use App\CompositionVsInheritance\Game\Contract\AnimalInterface;
+use App\CompositionVsInheritance\Game\Contract\NPCInterface;
 
-class Dragon implements AnimalInterface
+abstract class NPC implements NPCInterface
 {
-
     public function attack()
     {
         // TODO: Implement attack() method.
