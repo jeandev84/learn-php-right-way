@@ -2,6 +2,7 @@
 # https://doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#configuration
 declare(strict_types=1);
 
+use Doctrine\DBAL\Connection;
 use Dotenv\Dotenv;
 use Doctrine\DBAL\DriverManager;
 
@@ -54,9 +55,8 @@ $to   = '2022-01-31 23:59:59';
 $stmt->bindValue(':from', $from);
 $stmt->bindValue(':to', $to);
 $result = $stmt->executeQuery();
-$invoice = $result->fetchAllAssociative();
-dump($invoice);
-*/
+$invoices = $result->fetchAllAssociative();
+dump($invoices);
 
 
 $stmt = $conn->prepare('SELECT id, created_at FROM invoices WHERE created_at BETWEEN :from AND :to');
@@ -69,7 +69,18 @@ $stmt->bindValue(':to', $to, 'datetime');
 
 $result = $stmt->executeQuery();
 
-$invoice = $result->fetchAllAssociative();
+$invoices = $result->fetchAllAssociative();
 
-dump($invoice);
+dump($invoices);
+*/
+
+
+$ids   = [100, 101, 102];
+$binds = str_repeat('?', count($ids) - 1) . '?';
+
+$result = $conn->executeQuery('SELECT id, created_at FROM invoices WHERE id IN (?)', [$ids], [Connection::PARAM_INT_ARRAY]);
+
+$invoices = $result->fetchAllAssociative();
+
+dump($invoices);
 
