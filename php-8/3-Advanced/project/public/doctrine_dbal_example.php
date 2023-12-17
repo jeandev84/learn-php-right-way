@@ -72,10 +72,9 @@ $result = $stmt->executeQuery();
 $invoices = $result->fetchAllAssociative();
 
 dump($invoices);
-*/
 
 
-$ids   = [100, 101, 102];
+$ids   = [1, 2, 3];
 $binds = str_repeat('?', count($ids) - 1) . '?';
 
 $result = $conn->executeQuery('SELECT id, created_at FROM invoices WHERE id IN (?)', [$ids], [Connection::PARAM_INT_ARRAY]);
@@ -84,3 +83,55 @@ $invoices = $result->fetchAllAssociative();
 
 dump($invoices);
 
+==========================================================
+$conn->beginTransaction();
+$conn->commit();
+$conn->rollBack();
+
+$conn->transactional(function () {
+
+});
+
+
+$ids   = [1, 2, 3];
+$binds = str_repeat('?', count($ids) - 1) . '?';
+$invoices = $conn->fetchAllAssociative('SELECT id, created_at FROM invoices WHERE id IN (?)', [$ids], [Connection::PARAM_INT_ARRAY]);
+
+dump($invoices);
+
+
+$builder = $conn->createQueryBuilder();
+
+$invoices = $builder->select('id', 'amount')
+                    ->from('invoices')
+                    ->where('amount > ?')
+                    ->setParameter(0, 6000)
+                    ->fetchAllAssociative();
+
+
+dump($invoices);
+
+
+$builder = $conn->createQueryBuilder();
+
+$sql = $builder->select('id', 'amount')
+               ->from('invoices')
+               ->join('', '', '', '')
+               ->groupBy('id')
+               ->having('id > 0')
+               ->where('amount > ?')
+               ->setParameter(0, 6000)
+               ->getSQL();
+
+dump($sql);
+*/
+
+$schema = $conn->createSchemaManager();
+
+// dump($schema->listTableNames());
+/*
+dump(
+    array_map(fn(\Doctrine\DBAL\Schema\Column $column) => $column->getName(), $schema->listTableColumns('invoices'))
+);
+*/
+dump(array_keys($schema->listTableColumns('invoices')));

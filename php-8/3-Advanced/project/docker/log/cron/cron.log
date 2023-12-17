@@ -180,3 +180,248 @@ Stack trace:
 #1 /var/www/scripts/email.php(12): Framework\App->boot()
 #2 {main}
   thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
+
+Fatal error: Uncaught PDOException: could not find driver in /var/www/framework/Database/DB.php:33
+Stack trace:
+#0 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#1 /var/www/scripts/email.php(12): Framework\App->boot()
+#2 {main}
+  thrown in /var/www/framework/Database/DB.php on line 33
