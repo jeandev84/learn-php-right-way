@@ -12,8 +12,6 @@ use Framework\Routing\Router;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-$dotenv = \Dotenv\Dotenv::createImmutable(dirname(__DIR__));
-$dotenv->load();
 
 define('STORAGE_PATH', __DIR__.'/../storage');
 define('VIEW_PATH', __DIR__.'/../views');
@@ -33,16 +31,13 @@ $router->registerRoutesFromControllerAttributes(
 );
 
 
-/* dump($router->routes()); */
+/* $request = Request::createFromGlobals(); */
 
-
-$request = Request::createFromGlobals();
 (new App(
     $container,
-    new Config($_ENV),
     $router,
     ['uri' => $_SERVER['REQUEST_URI'], 'method' => $_SERVER['REQUEST_METHOD']]
 ))
-->run();
+->boot()->run();
 
 

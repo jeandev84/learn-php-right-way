@@ -5,6 +5,7 @@ namespace Framework;
 
 use App\Services\Contract\PaymentGatewayInterface;
 use App\Services\Gateway\PaymentGateway;
+use Dotenv\Dotenv;
 use Framework\Config\Config;
 use Framework\Container\Container;
 use Framework\Database\DB;
@@ -18,24 +19,21 @@ use Symfony\Component\Mailer\MailerInterface;
 class App
 {
       private static DB $db;
+      private Config $config;
+
 
       /**
        * @param Container $container
-       * @param Config $config
        * @param Router|null $router
        * @param array $request
      */
      public function __construct(
          protected Container $container,
-         protected Config $config,
          protected ?Router $router = null,
          protected array $request  = []
      )
      {
-         static::$db = new DB($config->db ?? []);
 
-         $this->container->bind(PaymentGatewayInterface::class, PaymentGateway::class);
-         $this->container->bind(MailerInterface::class, fn() => new CustomMailer($config->mailer['dsn']));
      }
 
 
@@ -43,6 +41,21 @@ class App
      public static function db(): DB
      {
          return static::$db;
+     }
+
+
+     public function boot(): static
+     {
+         $dotenv = Dotenv::createImmutable(dirname(__DIR__));
+         $dotenv->load();
+
+         $this->config = new Config($_ENV);
+         static::$db   = new DB($this->config->db ?? []);
+
+         $this->container->bind(PaymentGatewayInterface::class, PaymentGateway::class);
+         $this->container->bind(MailerInterface::class, fn() => new CustomMailer($this->config->mailer['dsn']));
+
+         return $this;
      }
 
 
