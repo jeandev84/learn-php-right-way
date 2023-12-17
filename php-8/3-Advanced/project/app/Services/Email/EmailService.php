@@ -20,16 +20,22 @@ class EmailService
 
      public function sendQueuedEmails(): void
      {
+         // TODO try and catch exception
          $emails = $this->emailModel->getEmailsByStatus(EmailStatus::Queue);
 
          foreach ($emails as $email) {
              $meta = json_decode($email->meta, true);
+
              $emailMessage = (new Email())
                             ->from($meta['from'])
                             ->to($meta['to'])
                             ->subject($email->subject)
                             ->text($email->text_body)
                             ->html($email->html_body);
+
+             $this->mailer->send($emailMessage);
+
+             $this->emailModel->markEmailSent($email->id);
          }
      }
 }

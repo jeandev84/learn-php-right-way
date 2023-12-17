@@ -29,7 +29,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - 33066:3306
+      - 3307:3306
 
 
   mailhog:
@@ -41,3 +41,10 @@ services:
     ports:
       - "8025:8025"
       - "1025:1025"
+
+  cron:
+    container_name: programwithgio-cron
+    build: ./cron
+    volumes:
+      - ../:/var/www
+      - ./log/cron:/var/log/cron
