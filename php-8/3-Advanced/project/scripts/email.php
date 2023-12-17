@@ -9,6 +9,8 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 $container = new Container();
 
-(new App($container))->boot()->run();
+(new App($container))->boot();
+
+$container->get(\App\Services\Email\EmailService::class)->sendQueuedEmails();
 
 
