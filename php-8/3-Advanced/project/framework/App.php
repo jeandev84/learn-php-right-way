@@ -21,13 +21,13 @@ class App
 
       /**
        * @param Container $container
-       * @param Router $router
        * @param Config $config
+       * @param Router|null $router
      */
      public function __construct(
          protected Container $container,
-         protected Router $router,
-         protected Config $config
+         protected Config $config,
+         protected ?Router $router = null,
      )
      {
          static::$db = new DB($config->db ?? []);

@@ -10,5 +10,5 @@ create table if not exists emails (
   html_body LONGTEXT,
   meta JSON NOT NULL,
   created_at DATETIME NOT NULL,
-  sent_at DATETIME NOT NULL
+  sent_at DATETIME DEFAULT NULL
 );

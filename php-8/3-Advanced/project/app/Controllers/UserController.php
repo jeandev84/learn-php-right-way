@@ -8,7 +8,9 @@ use Framework\Templating\View;
 use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mailer\Transport;
-use Symfony\Component\Mime\Email;
+use Symfony\Component\Mime\Address;
+use App\Models\Email;
+
 
 class UserController
 {
@@ -26,7 +28,7 @@ class UserController
 
 
       #[Post('/users')]
-      public function register(): View
+      public function register()
       {
           $name  = $_POST['name'];
           $email = $_POST['email'];
@@ -45,21 +47,19 @@ Hello $firstName,
 <br/><br/>
 Thank you for signing up!
 HTMLBody;
-           $email = (new Email())
-                    ->from('support@example.com')
-                    ->to($email)
-                    ->subject('Welcome!')
-                    ->attach('Hello World!', 'welcome.txt')
-                    ->text($text)
-                    ->html($html);
 
-           $this->mailer->send($email);
-
-           exit;
+          (new Email())->queue(
+              new Address($email),
+              new Address('support@example.com', 'Support'),
+              'Welcome!',
+              $html,
+              $text
+          );
       }
 
 
 
+      /*
 
       private function registerLogic(): void
       {
@@ -98,4 +98,6 @@ HTMLBody;
 
           exit;
       }
+  */
+
 }

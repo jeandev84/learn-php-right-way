@@ -37,7 +37,11 @@ $router->registerRoutesFromControllerAttributes(
 
 
 $request = Request::createFromGlobals();
-(new App($container, $router, new Config($_ENV)))
+(new App(
+$container,
+new Config($_ENV),
+$router
+))
 ->run($request);
 
 
