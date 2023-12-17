@@ -49,10 +49,7 @@ class App
      public function run()
      {
          try {
-             echo $this->router->resolve(
-                 $this->request['uri'],
-                 $this->request['method']
-             );
+             echo $this->router->resolve($this->request['uri'], $this->request['method']);
          } catch (RouteNotfoundException $e) {
              # header('HTTP/1.1 404 Not Found');
              http_response_code(404);
