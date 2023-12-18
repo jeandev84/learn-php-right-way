@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Framework;
 
-# use App\Services\Api\AbstractApi\EmailValidationService as AbstractApiEmailService;
+use App\Services\Api\AbstractApi\EmailValidationService as AbstractApiEmailService;
 use App\Services\Api\Emailable\EmailValidationService as EmailableService;
 use Dotenv\Dotenv;
 use Framework\Config\Config;
@@ -19,6 +19,7 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Events\Dispatcher;
 use Symfony\Component\Mailer\MailerInterface;
 use Twig\Environment;
+use Twig\Extra\Intl\IntlExtension;
 use Twig\Loader\FilesystemLoader;
 
 class App
@@ -68,9 +69,12 @@ class App
 
          # bindings services
          $twig = new TwigRenderAdapter([
-             'cache' => STORAGE_PATH . '/cache',
-             'auto_reload' => true
+             'cache' => STORAGE_PATH . '/cache',      # cache path
+             'auto_reload' => true,                   # refresh cache render
          ]);
+
+         # read: https://www.php.net/manual/en/intro.intl.php
+         $twig->addExtension(new IntlExtension());
 
          $this->container->bind(MailerInterface::class, fn() => new CustomMailer($this->config->mailer['dsn']));
          $this->container->singleton(RenderInterface::class, fn() => $twig);
