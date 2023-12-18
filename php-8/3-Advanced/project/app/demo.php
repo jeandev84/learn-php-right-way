@@ -1,33 +1,21 @@
 <?php
+
 declare(strict_types=1);
 
-use App\Entity\Invoice;
-use App\Entity\InvoiceItem;
-use App\Enums\InvoiceStatus;
-use Doctrine\DBAL\Connection;
-use Dotenv\Dotenv;
-use Doctrine\DBAL\DriverManager;
+use App\Models\Invoice;
+use App\Models\InvoiceItem;
 
+require_once __DIR__.'/../eloquent.php';
 
-require __DIR__ . '/../vendor/autoload.php';
+$invoice = new Invoice();
 
-$dotenv = Dotenv::createImmutable(dirname(__DIR__));
-$dotenv->load();
+$invoice->amount = 45;
+$invoice->invoice_number = '1';
+$invoice->status = \App\Enums\InvoiceStatus::Pending;
+$invoice->due_date = (new \Carbon\Carbon())
+                     ->addDays(10);
 
-
-$params = [
-    'dbname'     => $_ENV['DB_DATABASE'],
-    'user'       => $_ENV['DB_USER'],
-    'password'   => $_ENV['DB_PASS'],
-    'host'       => $_ENV['DB_HOST'],
-    'driver'     => $_ENV['DB_DRIVER'] ?? 'pdo_mysql',
-];
-
-$entityManager = \Doctrine\ORM\EntityManager::create(
-    $params,
-    \Doctrine\ORM\Tools\Setup::createAttributeMetadataConfiguration([__DIR__.'/Entity'])
-);
-
+$invoice->save();
 
 $items = [
     ['Item 1', 1, 15],
@@ -35,21 +23,15 @@ $items = [
     ['Item 3', 4, 3.75],
 ];
 
-$invoice = (new Invoice())
-           ->setAmount(45)
-           ->setInvoiceNumber('1')
-           ->setStatus(InvoiceStatus::Pending)
-;
 
 foreach ($items as [$description, $quantity, $unitPrice]) {
-    $item = (new InvoiceItem())
-            ->setDescription($description)
-            ->setQuantity($quantity)
-            ->setUnitPrice($unitPrice);
+    $item = new InvoiceItem();
+    $item->description = $description;
+    $item->quantity    = $quantity;
+    $item->unit_price  = $unitPrice;
+    $item->invoice_id  = $invoice->id;
 
-    $invoice->addItem($item);
+    $item->invoice()->associate($invoice);
+
+    $item->save();
 }
-
-
-$entityManager->persist($invoice);
-$entityManager->flush();
