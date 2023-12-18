@@ -1,4 +1,4 @@
-FROM php:8.1.0RC6-fpm
+FROM php:8.1-fpm
 
 # load php extensions
 RUN apt-get update && apt-get install -y \

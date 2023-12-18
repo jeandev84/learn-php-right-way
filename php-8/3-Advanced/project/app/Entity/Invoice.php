@@ -38,7 +38,7 @@ class Invoice
 
 
      #[OneToMany(targetEntity: InvoiceItem::class, mappedBy: 'invoice')]
-     private Collection $items;
+     private $items;
 
 
      public function __construct()
@@ -154,5 +154,14 @@ class Invoice
          }
 
          return $this;
+    }
+
+
+    /**
+     * @return Collection
+    */
+    public function getItems(): Collection
+    {
+        return $this->items;
     }
 }

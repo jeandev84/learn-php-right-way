@@ -36,7 +36,7 @@ class InvoiceItem
 
 
     #[Column(name: 'unit_price', type: Types::DECIMAL, precision: 10, scale: 2)]
-    private ?int $unitPrice;
+    private ?float $unitPrice;
 
 
     // #[ManyToOne(targetEntity: Invoice::class)]
@@ -111,12 +111,12 @@ class InvoiceItem
     }
 
 
-    public function getUnitPrice(): ?int
+    public function getUnitPrice(): ?float
     {
         return $this->unitPrice;
     }
 
-    public function setUnitPrice(?int $unitPrice): self
+    public function setUnitPrice(?float $unitPrice): self
     {
         $this->unitPrice = $unitPrice;
 

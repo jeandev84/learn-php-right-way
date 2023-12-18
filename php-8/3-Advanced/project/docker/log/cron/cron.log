@@ -1018,3 +1018,87 @@ Stack trace:
 #1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
 #2 {main}
   thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Warning: require_once(/var/www/scripts/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/scripts/email.php on line 8
+
+Fatal error: Uncaught Error: Failed opening required '/var/www/scripts/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/scripts/email.php:8
+Stack trace:
+#0 {main}
+  thrown in /var/www/scripts/email.php on line 8
+
+Warning: require_once(/var/www/scripts/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/scripts/email.php on line 8
+
+Fatal error: Uncaught Error: Failed opening required '/var/www/scripts/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/scripts/email.php:8
+Stack trace:
+#0 {main}
+  thrown in /var/www/scripts/email.php on line 8
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
