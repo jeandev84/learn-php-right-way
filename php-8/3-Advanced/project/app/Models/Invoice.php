@@ -47,4 +47,26 @@ class Invoice extends Model
        {
            return $this->hasMany(InvoiceItem::class);
        }
+
+
+       ## It works like in doctrine events (pre/post persist ...)
+       protected static function booted()
+       {
+            // I tell that before creating call this callback
+            static::creating(function (Invoice $invoice) {
+                if ($invoice->isClean('due_date')) {
+                    $invoice->due_date = (new Carbon())->addDays(10);
+                }
+            });
+       }
+
+
+
+       public static function allPaid(): array
+       {
+           return self::query()
+                       ->where('status', InvoiceStatus::Paid)
+                       ->get()
+                       ->toArray();
+       }
 }

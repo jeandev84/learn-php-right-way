@@ -6,24 +6,18 @@ use App\Enums\Color;
 use App\Enums\InvoiceStatus;
 use App\Models\Invoice;
 use App\Services\InvoiceService;
+use Carbon\Carbon;
 use Framework\Routing\Attributes\Get;
 use Framework\Templating\View;
+use Symfony\Component\Mailer\MailerInterface;
 
 class InvoiceController
 {
 
-    public function __construct(protected  InvoiceService $invoiceService)
-    {
-    }
-
-
     #[Get('/invoices')]
     public function index(): View
     {
-        $invoices = Invoice::query()
-                             ->where('status', InvoiceStatus::Paid)
-                             ->get()
-                             ->toArray();
+        $invoices = Invoice::allPaid();
 
         return View::make('invoices/index', [
             'invoices' => $invoices
@@ -31,25 +25,19 @@ class InvoiceController
     }
 
 
-    public function create(): View
+
+    #[Get('/invoices/new')]
+    public function create()
     {
-        return View::make('invoices/create');
-    }
+        $invoice = new Invoice();
 
+        $invoice->invoice_number = 5;
+        $invoice->amount         = 20;
+        $invoice->status         = InvoiceStatus::Pending;
+        $invoice->due_date       = (new Carbon())->addDay();
 
+        $invoice->save();
 
-    public function store()
-    {
-        $amount = $_POST['amount'];
-
-        dump($amount);
-    }
-
-
-    public function process(): View
-    {
-        $this->invoiceService->process([], 25);
-
-        return View::make('index');
+        echo $invoice->id . ', ' . $invoice->due_date->format('m/d/Y');
     }
 }
