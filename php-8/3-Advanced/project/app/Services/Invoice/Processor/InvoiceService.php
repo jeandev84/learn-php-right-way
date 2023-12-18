@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Services\Invoice;
+namespace App\Services\Invoice\Processor;
 
-use App\Services\EmailService;
+use App\Services\Email\EmailSenderService;
 use App\Services\Payment\Contract\PaymentGatewayInterface;
 use App\Services\Sales\SalesTaxService;
 
@@ -13,7 +13,7 @@ class InvoiceService
      public function __construct(
          protected SalesTaxService $salesTaxService,
          protected PaymentGatewayInterface $paymentGateway,
-         protected EmailService    $emailService
+         protected EmailSenderService  $emailService
      )
      {
      }

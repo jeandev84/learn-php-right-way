@@ -2,55 +2,28 @@
 declare(strict_types=1);
 
 namespace App\Controllers;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Slim\Views\Twig;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
-use App\Services\Invoice\InvoiceService;
-use Framework\Routing\Attributes\Enums\HttpMethod;
-use Framework\Routing\Attributes\Get;
-use Framework\Routing\Attributes\Post;
-use Framework\Routing\Attributes\Put;
-use Framework\Routing\Attributes\Route;
-use Framework\Templating\PHP\View;
 
 class HomeController
 {
 
-    // #[Get('/')]
-    // private int $x;
-
-
-
-    public function __construct(protected  InvoiceService $invoiceService)
-    {
-    }
-
-
-     // #[Route('/')]
-     #[Get('/')]
-     // #[Get(path: '/home')]
-     #[Route('/home', HttpMethod::Head)]
-     #[Post(path: '/home')]
-     public function index(): View
+    /**
+     * @param Request $request
+     * @param Response $response
+     * @param $args
+     * @return Response
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+     public function index(Request $request, Response $response, $args): Response
      {
-         $this->invoiceService->process([], 25);
-
-         return View::make('index');
+        return Twig::fromRequest($request)->render($response, 'index.twig');
      }
-
-
-
-    // #[Route('/', 'POST')]
-    #[Post('/')]
-    public function store()
-    {
-
-    }
-
-
-
-    // #[Route('/', 'PUT')]
-    #[Put('/')]
-    public function update()
-    {
-
-    }
 }

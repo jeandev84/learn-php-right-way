@@ -62,7 +62,7 @@ class Invoice extends Model
 
 
 
-       public static function getPaidInvoices(): array
+       public static function allPaid(): array
        {
            return self::query()
                        ->where('status', InvoiceStatus::Paid)

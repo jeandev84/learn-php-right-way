@@ -76,7 +76,7 @@ class App
          $this->container->bind(MailerInterface::class, fn() => new CustomMailer($this->config->mailer['dsn']));
          $this->container->singleton(RenderInterface::class, fn() => $twig);
          $this->container->bind(
-     EmailValidationInterface::class,
+             EmailValidationInterface::class,
              fn() => new EmailableService($this->config->apiKeys['emailable'])
          );
 
