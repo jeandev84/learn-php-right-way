@@ -115,6 +115,7 @@ $query = $queryBuilder->select('i')
 
 // Use Expression Builder
 // WHERE amount > :amount AND (status = :status OR createdAt >= :date)
+/*
 $query = $queryBuilder->select('i')
                       ->from(Invoice::class, 'i')
                       ->where(
@@ -132,17 +133,74 @@ $query = $queryBuilder->select('i')
                       ->orderBy('i.createdAt', 'desc')
                       ->getQuery();
 
-/*
 echo $query->getDQL() . PHP_EOL;
 SELECT i FROM App\Entity\Invoice i, App\Entity\Invoice i WHERE i.amount > :amount AND (i.status = :status OR i.createdAt >= :date) ORDER BY i.createdAt desc
-*/
 
 $invoices = $query->getResult();
+
+// @var Invoice $invoice
+foreach ($invoices as $invoice) {
+    echo $invoice->getCreatedAt()->format('m/d/Y g:ia')
+        . ', '. $invoice->getAmount()
+        . ', ' . $invoice->getStatus()->toString(). PHP_EOL;
+}
+*/
+
+
+$query = $queryBuilder
+                     // ->select('i', 'it.description')
+                     ->select('i', 'it')
+                     ->from(Invoice::class, 'i')
+                     ->join('i.items', 'it')
+                     ->where(
+                        $queryBuilder->expr()->andX(
+                            $queryBuilder->expr()->gt('i.amount', ':amount'), // i.amount > :amount (greater than)
+                            $queryBuilder->expr()->orX(
+                                $queryBuilder->expr()->eq('i.status', ':status'), // i.status = :status (equal)
+                                $queryBuilder->expr()->gte('i.createdAt', ':date') // i.amount > :amount (greater than equal)
+                            )
+                        )
+                    )
+                    ->setParameter('amount', 100)
+                    ->setParameter('status', InvoiceStatus::Paid->value)
+                    ->setParameter('date', '2023-12-18 00:17:16')
+                    ->orderBy('i.createdAt', 'desc')
+                    ->getQuery();
+
+
+# dd($query->getArrayResult());
+
+
+$invoices = $query->getResult();
+
 
 /** @var Invoice $invoice */
 foreach ($invoices as $invoice) {
     echo $invoice->getCreatedAt()->format('m/d/Y g:ia')
         . ', '. $invoice->getAmount()
         . ', ' . $invoice->getStatus()->toString(). PHP_EOL;
+
+    /** @var InvoiceItem $item */
+    foreach ($invoice->getItems() as $item) {
+        echo ' - '  . $item->getDescription()
+             . ', ' . $item->getQuantity()
+             . ', ' . $item->getUnitPrice() . PHP_EOL;
+    }
 }
 
+/*
+$connection = $entityManager->getConnection();
+$entityManager->beginTransaction();
+$entityManager->commit();
+$entityManager->rollback();
+$entityManager->transactional(function () {
+
+});
+
+$entityManager->wrapInTransaction(function () {
+
+});
+*/
+
+$users = $entityManager->createNativeQuery('SELECT * FROM users')
+                       ->getResult();
