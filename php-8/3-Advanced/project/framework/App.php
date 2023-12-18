@@ -11,6 +11,8 @@ use Framework\Database\DB;
 use Framework\Mailer\Symfony\CustomMailer;
 use Framework\Routing\Exceptions\RouteNotfoundException;
 use Framework\Routing\Router;
+use Framework\Templating\Contract\RenderInterface;
+use Framework\Templating\Twig\TwigRenderAdapter;
 use Framework\Validation\Contracts\EmailValidationInterface;
 use Illuminate\Container\Container;
 use Illuminate\Database\Capsule\Manager as Capsule;
@@ -65,14 +67,13 @@ class App
          $this->initDb($this->config->db);
 
          # bindings services
-         $loader = new FilesystemLoader(VIEW_PATH);
-         $twig   = new Environment($loader, [
+         $twig = new TwigRenderAdapter([
              'cache' => STORAGE_PATH . '/cache',
              'auto_reload' => true
          ]);
 
          $this->container->bind(MailerInterface::class, fn() => new CustomMailer($this->config->mailer['dsn']));
-         $this->container->singleton(Environment::class, fn() => $twig);
+         $this->container->singleton(RenderInterface::class, fn() => $twig);
          $this->container->bind(
      EmailValidationInterface::class,
              fn() => new EmailableService($this->config->apiKeys['emailable'])

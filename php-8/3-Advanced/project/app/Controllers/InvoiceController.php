@@ -7,13 +7,14 @@ use App\Models\Invoice;
 use Carbon\Carbon;
 use Framework\Routing\Attributes\Get;
 use Framework\Templating\View;
-use Twig\Environment as Twig;
+use Framework\Templating\Contract\RenderInterface;
+
 
 class InvoiceController
 {
 
 
-    public function __construct(private Twig $twig)
+    public function __construct(protected RenderInterface $render)
     {
     }
 
@@ -22,7 +23,7 @@ class InvoiceController
     {
         $invoices = Invoice::allPaid();
 
-        return $this->twig->render('invoices/index.twig', [
+        return $this->render->render('invoices/index.twig', [
             'invoices' => $invoices
         ]);
     }
