@@ -10,6 +10,8 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 require_once __DIR__.'/../eloquent.php';
 
+
+
 /*
 Save data Eloquent
 
@@ -55,6 +57,13 @@ Invoice::query()->where('id', $invoiceId)->update(['status' => InvoiceStatus::Pa
 */
 
 
+# Use Base query builder
+$invoices = Capsule::connection()->query()->from('invoices')->get();
+$invoices = Capsule::connection()->table('invoices')->where('status',  InvoiceStatus::Paid)->get();
+$invoices = Capsule::table('invoices')->where('amount',  '<=', 45)->get();
+
+
+# Use Eloquent query builder it like DQL in doctrine
 # Fetch data or join and complex query
 $invoiceId  = 1;
 Invoice::query()->where('id', $invoiceId)->update(['status' => InvoiceStatus::Paid]);
@@ -97,6 +106,23 @@ Invoice::where('status', InvoiceStatus::Paid)
 */
 
 
+$column = 'status';
+$allowedColumns = ['status', '...'];
+
+if (! in_array($column, $allowedColumns)) {
+    throw new \RuntimeException('...');
+}
+
+Invoice::query()
+    ->where($column, InvoiceStatus::Paid)
+    ->get()
+    ->each(function (Invoice $invoice) {
+        // dd($invoice->status);
+        echo $invoice->id . ', '.
+            $invoice->status->toString() . ', '.
+            $invoice->created_at->format('m/d/Y') . PHP_EOL;
+    });
+
 // Delete
 Invoice::where('status', InvoiceStatus::Paid)
     ->get()
@@ -113,3 +139,4 @@ Invoice::where('status', InvoiceStatus::Paid)
                 ->where('description', 'Item 2')
                 ->delete();
     });
+

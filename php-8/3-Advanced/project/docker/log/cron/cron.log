@@ -4625,3 +4625,73 @@ Stack trace:
 #4 /var/www/scripts/email.php(12): Framework\App->boot()
 #5 {main}
   thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
