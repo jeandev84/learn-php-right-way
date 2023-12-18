@@ -2,15 +2,11 @@
 
 declare(strict_types = 1);
 
+use App\Config;
 use Doctrine\ORM\EntityManager;
-
 use Doctrine\ORM\ORMSetup;
-
-use Framework\Config\Config;
 use Slim\Views\Twig;
-
 use Twig\Extra\Intl\IntlExtension;
-
 use function DI\create;
 
 return [

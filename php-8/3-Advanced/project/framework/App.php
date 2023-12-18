@@ -3,11 +3,10 @@ declare(strict_types=1);
 
 namespace Framework;
 
+use App\Config;
 use App\Services\Api\Emailable\EmailValidationService as EmailableService;
 use Dotenv\Dotenv;
-use Framework\Config\Config;
 use Framework\Database\DB;
-use Framework\Mailer\Symfony\CustomMailer;
 use Framework\Routing\Exceptions\RouteNotfoundException;
 use Framework\Routing\Router;
 use Framework\Templating\Contract\RenderInterface;
