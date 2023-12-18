@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Services\Emailable;
+namespace App\Services\Api\Emailable;
 
 use Framework\Validation\Contracts\EmailValidationInterface;
 use GuzzleHttp\Client;

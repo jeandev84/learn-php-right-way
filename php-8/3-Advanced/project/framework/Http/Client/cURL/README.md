@@ -67,8 +67,14 @@ JSON (JavaScript Object Notation)
 
 SDK (Software Development Kit)
 
+Email Services:
 Use Emailable API Integration
 - https://emailable.com/docs/api#authentication
+
+Use Abstract API Integration
+- https://abstractapi.com/email-verification-validation-api#docs
+- https://docs.abstractapi.com/email-validation
+
 
 
 HTTP Client Guzzle PHP

@@ -28,10 +28,11 @@ class Config
                 'prefix'     => '',
             ],
             'mailer' => [
-                'dsn' => $env['MAILER_DSN']
+                'dsn' => $env['MAILER_DSN'] ?? ''
             ],
             'apiKeys' => [
-                'emailable' => $env['EMAILABLE_API_KEY'] ?? ''
+                'emailable' => $env['EMAILABLE_API_KEY'] ?? '',
+                'abstract_api_email_validation' => $env['ABSTRACT_API_EMAIL_VALIDATION_API_KEY'] ?? '',
             ]
         ];
     }
