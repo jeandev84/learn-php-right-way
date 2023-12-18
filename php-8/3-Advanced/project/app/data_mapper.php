@@ -50,9 +50,15 @@ foreach ($items as [$description, $quantity, $unitPrice]) {
             ->setUnitPrice($unitPrice);
 
     $invoice->addItem($item);
-    $entityManager->persist($item);
 }
 
 
 $entityManager->persist($invoice);
 $entityManager->flush();
+
+echo $entityManager->getUnitOfWork()->size();
+
+/*
+$entityManager->remove($invoice);
+$entityManager->flush();
+*/
