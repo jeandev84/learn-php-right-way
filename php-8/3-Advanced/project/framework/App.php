@@ -73,7 +73,7 @@ class App
          # read: https://www.php.net/manual/en/intro.intl.php
          $twig->addExtension(new IntlExtension());
 
-         $this->container->bind(MailerInterface::class, fn() => new CustomMailer($this->config->mailer['dsn']));
+
          $this->container->singleton(RenderInterface::class, fn() => $twig);
          $this->container->bind(
              EmailValidationInterface::class,
