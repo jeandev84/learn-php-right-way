@@ -10,6 +10,7 @@ class Invoice extends Model
 
     public function all(InvoiceStatus $status): array
     {
+         // SQL
          return $this->db->createQueryBuilder()
                          ->select('id', 'invoice_number', 'amount', 'status')
                          ->from('invoices')
