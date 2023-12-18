@@ -20,13 +20,10 @@ class InvoiceController
     #[Get('/invoices')]
     public function index(): View
     {
-        /*
-        dump(enum_exists(InvoiceStatus::class));
-        dump(InvoiceStatus::cases());
-        dump(InvoiceStatus::fromColor(Color::Green));
-        */
-
-        $invoices = (new Invoice())->all(InvoiceStatus::Paid);
+        $invoices = Invoice::query()
+                             ->where('status', InvoiceStatus::Paid)
+                             ->get()
+                             ->toArray();
 
         return View::make('invoices/index', [
             'invoices' => $invoices

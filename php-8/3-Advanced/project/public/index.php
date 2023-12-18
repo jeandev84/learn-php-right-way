@@ -5,9 +5,7 @@ use App\Controllers\HomeController;
 use App\Controllers\InvoiceController;
 use App\Controllers\UserController;
 use Framework\App;
-use Framework\Config\Config;
-use Framework\Container\Container;
-use Framework\Http\Request\Request;
+use Illuminate\Container\Container;
 use Framework\Routing\Router;
 
 require_once __DIR__.'/../vendor/autoload.php';
@@ -24,14 +22,11 @@ $router    = new Router($container);
 $router->registerRoutesFromControllerAttributes(
     [
       HomeController::class,
-      GeneratorExampleController::class,
       InvoiceController::class,
       UserController::class
     ]
 );
 
-
-/* $request = Request::createFromGlobals(); */
 
 (new App(
     $container,

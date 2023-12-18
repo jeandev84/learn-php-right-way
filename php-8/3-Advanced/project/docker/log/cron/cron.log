@@ -4705,3 +4705,184 @@ Stack trace:
 #4 /var/www/scripts/email.php(12): Framework\App->boot()
 #5 {main}
   thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(53): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(66): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(69): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(69): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Fatal error: Uncaught Doctrine\DBAL\Exception: The given 'driver' mysql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, pgsql, sqlsrv, sqlite3 in /var/www/vendor/doctrine/dbal/src/Exception.php:86
+Stack trace:
+#0 /var/www/vendor/doctrine/dbal/src/DriverManager.php(225): Doctrine\DBAL\Exception::unknownDriver('mysql', Array)
+#1 /var/www/vendor/doctrine/dbal/src/DriverManager.php(186): Doctrine\DBAL\DriverManager::createDriver('mysql', NULL)
+#2 /var/www/framework/Database/DB.php(20): Doctrine\DBAL\DriverManager::getConnection(Array)
+#3 /var/www/framework/App.php(60): Framework\Database\DB->__construct(Array)
+#4 /var/www/scripts/email.php(12): Framework\App->boot()
+#5 {main}
+  thrown in /var/www/vendor/doctrine/dbal/src/Exception.php on line 86
+
+Warning: Undefined array key "pass" in /var/www/framework/Database/Connection/Connection.php on line 21
+
+Fatal error: Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.18.0.5' (using password: NO) in /var/www/framework/Database/Connection/Connection.php:25
+Stack trace:
+#0 /var/www/framework/Database/ORM/Model.php(25): Framework\Database\Connection\Connection::make(Array)
+#1 /var/www/framework/Container/Container.php(82): Framework\Database\ORM\Model->__construct()
+#2 /var/www/framework/Container/Container.php(36): Framework\Container\Container->resolve('App\\Models\\Emai...')
+#3 /var/www/framework/Container/Container.php(104): Framework\Container\Container->get('App\\Models\\Emai...')
+#4 [internal function]: Framework\Container\Container->Framework\Container\{closure}(Object(ReflectionParameter))
+#5 /var/www/framework/Container/Container.php(87): array_map(Object(Closure), Array)
+#6 /var/www/framework/Container/Container.php(36): Framework\Container\Container->resolve('App\\Services\\Em...')
+#7 /var/www/scripts/email.php(14): Framework\Container\Container->get('App\\Services\\Em...')
+#8 {main}
+  thrown in /var/www/framework/Database/Connection/Connection.php on line 25
+
+Warning: Undefined array key "pass" in /var/www/framework/Database/Connection/Connection.php on line 21
+
+Fatal error: Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.18.0.5' (using password: NO) in /var/www/framework/Database/Connection/Connection.php:25
+Stack trace:
+#0 /var/www/framework/Database/ORM/Model.php(25): Framework\Database\Connection\Connection::make(Array)
+#1 /var/www/framework/Container/Container.php(82): Framework\Database\ORM\Model->__construct()
+#2 /var/www/framework/Container/Container.php(36): Framework\Container\Container->resolve('App\\Models\\Emai...')
+#3 /var/www/framework/Container/Container.php(104): Framework\Container\Container->get('App\\Models\\Emai...')
+#4 [internal function]: Framework\Container\Container->Framework\Container\{closure}(Object(ReflectionParameter))
+#5 /var/www/framework/Container/Container.php(87): array_map(Object(Closure), Array)
+#6 /var/www/framework/Container/Container.php(36): Framework\Container\Container->resolve('App\\Services\\Em...')
+#7 /var/www/scripts/email.php(14): Framework\Container\Container->get('App\\Services\\Em...')
+#8 {main}
+  thrown in /var/www/framework/Database/Connection/Connection.php on line 25
+
+Warning: Undefined array key "pass" in /var/www/framework/Database/Connection/Connection.php on line 21
+
+Fatal error: Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.18.0.5' (using password: NO) in /var/www/framework/Database/Connection/Connection.php:25
+Stack trace:
+#0 /var/www/framework/Database/ORM/Model.php(25): Framework\Database\Connection\Connection::make(Array)
+#1 /var/www/framework/Container/Container.php(82): Framework\Database\ORM\Model->__construct()
+#2 /var/www/framework/Container/Container.php(36): Framework\Container\Container->resolve('App\\Models\\Emai...')
+#3 /var/www/framework/Container/Container.php(104): Framework\Container\Container->get('App\\Models\\Emai...')
+#4 [internal function]: Framework\Container\Container->Framework\Container\{closure}(Object(ReflectionParameter))
+#5 /var/www/framework/Container/Container.php(87): array_map(Object(Closure), Array)
+#6 /var/www/framework/Container/Container.php(36): Framework\Container\Container->resolve('App\\Services\\Em...')
+#7 /var/www/scripts/email.php(14): Framework\Container\Container->get('App\\Services\\Em...')
+#8 {main}
+  thrown in /var/www/framework/Database/Connection/Connection.php on line 25
+
+Warning: Undefined array key "pass" in /var/www/framework/Database/Connection/Connection.php on line 21
+
+Fatal error: Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.18.0.5' (using password: NO) in /var/www/framework/Database/Connection/Connection.php:25
+Stack trace:
+#0 /var/www/framework/Database/ORM/Model.php(25): Framework\Database\Connection\Connection::make(Array)
+#1 /var/www/framework/Container/Container.php(82): Framework\Database\ORM\Model->__construct()
+#2 /var/www/framework/Container/Container.php(36): Framework\Container\Container->resolve('App\\Models\\Emai...')
+#3 /var/www/framework/Container/Container.php(104): Framework\Container\Container->get('App\\Models\\Emai...')
+#4 [internal function]: Framework\Container\Container->Framework\Container\{closure}(Object(ReflectionParameter))
+#5 /var/www/framework/Container/Container.php(87): array_map(Object(Closure), Array)
+#6 /var/www/framework/Container/Container.php(36): Framework\Container\Container->resolve('App\\Services\\Em...')
+#7 /var/www/scripts/email.php(14): Framework\Container\Container->get('App\\Services\\Em...')
+#8 {main}
+  thrown in /var/www/framework/Database/Connection/Connection.php on line 25
+
+Warning: Undefined array key "pass" in /var/www/framework/Database/Connection/Connection.php on line 21
+
+Fatal error: Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.18.0.5' (using password: NO) in /var/www/framework/Database/Connection/Connection.php:25
+Stack trace:
+#0 /var/www/framework/Database/ORM/Model.php(25): Framework\Database\Connection\Connection::make(Array)
+#1 /var/www/framework/Container/Container.php(82): Framework\Database\ORM\Model->__construct()
+#2 /var/www/framework/Container/Container.php(36): Framework\Container\Container->resolve('App\\Models\\Emai...')
+#3 /var/www/framework/Container/Container.php(104): Framework\Container\Container->get('App\\Models\\Emai...')
+#4 [internal function]: Framework\Container\Container->Framework\Container\{closure}(Object(ReflectionParameter))
+#5 /var/www/framework/Container/Container.php(87): array_map(Object(Closure), Array)
+#6 /var/www/framework/Container/Container.php(36): Framework\Container\Container->resolve('App\\Services\\Em...')
+#7 /var/www/scripts/email.php(14): Framework\Container\Container->get('App\\Services\\Em...')
+#8 {main}
+  thrown in /var/www/framework/Database/Connection/Connection.php on line 25
+
+Fatal error: Uncaught TypeError: Framework\App::__construct(): Argument #1 ($container) must be of type Illuminate\Container\Container, Framework\Container\Container given, called in /var/www/scripts/email.php on line 12 and defined in /var/www/framework/App.php:30
+Stack trace:
+#0 /var/www/scripts/email.php(12): Framework\App->__construct(Object(Framework\Container\Container))
+#1 {main}
+  thrown in /var/www/framework/App.php on line 30

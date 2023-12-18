@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Framework\Routing;
 
-use Framework\Container\Container;
+use Illuminate\Container\Container;
 use Framework\Routing\Attributes\Route;
 use Framework\Routing\Exceptions\RouteNotfoundException;
 
