@@ -6834,3 +6834,13 @@ Fatal error: Uncaught Error: Class "Framework\Container\Container" not found in 
 Stack trace:
 #0 {main}
   thrown in /var/www/scripts/email.php on line 8
+
+Fatal error: Uncaught Error: Class "Framework\Container\Container" not found in /var/www/scripts/email.php:8
+Stack trace:
+#0 {main}
+  thrown in /var/www/scripts/email.php on line 8
+
+Fatal error: Uncaught Error: Class "Framework\Container\Container" not found in /var/www/scripts/email.php:8
+Stack trace:
+#0 {main}
+  thrown in /var/www/scripts/email.php on line 8
