@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Framework;
 
-# use App\Services\Api\AbstractApi\EmailValidationService;
-use App\Services\Api\Emailable\EmailValidationService;
+# use App\Services\Api\AbstractApi\EmailValidationService as AbstractApiEmailService;
+use App\Services\Api\Emailable\EmailValidationService as EmailableService;
 use Dotenv\Dotenv;
 use Framework\Config\Config;
 use Framework\Database\DB;
@@ -62,13 +62,13 @@ class App
          $this->container->bind(MailerInterface::class, fn() => new CustomMailer($this->config->mailer['dsn']));
          $this->container->bind(
      EmailValidationInterface::class,
-             fn() => new EmailValidationService($this->config->apiKeys['emailable'])
+             fn() => new EmailableService($this->config->apiKeys['emailable'])
          );
 
          /*
          $this->container->bind(
              EmailValidationInterface::class,
-             fn() => new EmailValidationService($this->config->apiKeys['abstract_api_email_validation'])
+             fn() => new AbstractApiEmailService($this->config->apiKeys['abstract_api_email_validation'])
          );
          */
 

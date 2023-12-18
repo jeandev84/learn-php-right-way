@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Services\Api\Emailable;
 
+use App\DTO\EmailValidationResult;
 use Framework\Validation\Contracts\EmailValidationInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ConnectException;
@@ -29,7 +30,7 @@ class EmailValidationService implements EmailValidationInterface
        *
        * @throws GuzzleException
       */
-      public function verify(string $email): array
+      public function verify(string $email): EmailValidationResult
       {
           # $stack  = new HandlerStack();
           $stack    = HandlerStack::create();
@@ -50,7 +51,9 @@ class EmailValidationService implements EmailValidationInterface
 
           $response = $client->get('verify', ['query' => $params]);
 
-          return json_decode($response->getBody()->getContents(), true);
+          $body = json_decode($response->getBody()->getContents(), true);
+
+          return new EmailValidationResult($body['score'], $body['state'] === 'deliverable');
       }
 
 

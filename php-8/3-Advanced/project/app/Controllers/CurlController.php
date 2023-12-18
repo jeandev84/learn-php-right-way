@@ -20,6 +20,9 @@ class CurlController
       {
            $result = $this->emailValidationService->verify($_ENV['YOUR_EMAIL']);
 
+           $score  = $result->score;
+           $isDeliverable = $result->isDeliverable;
+
            echo '<pre>';
            print_r($result);
            echo '</pre>';

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Services\Api\AbstractApi;
 
+use App\DTO\EmailValidationResult;
 use Framework\Validation\Contracts\EmailValidationInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ConnectException;
@@ -29,7 +30,7 @@ class EmailValidationService implements EmailValidationInterface
        *
        * @throws GuzzleException
       */
-      public function verify(string $email): array
+      public function verify(string $email): EmailValidationResult
       {
           # https://app.abstractapi.com/api/avatars/tester (GET API KEY)
           # $stack  = new HandlerStack();
@@ -51,7 +52,9 @@ class EmailValidationService implements EmailValidationInterface
 
           $response = $client->get('', ['query' => $params]);
 
-          return json_decode($response->getBody()->getContents(), true);
+          $body = json_decode($response->getBody()->getContents(), true);
+
+          return new EmailValidationResult((int)($body['quality_score'] * 100), $body['deliverability'] === 'DELIVERABLE');
       }
 
 
