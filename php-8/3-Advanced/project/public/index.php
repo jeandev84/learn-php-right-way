@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\CurlController;
 use App\Controllers\GeneratorExampleController;
 use App\Controllers\HomeController;
 use App\Controllers\InvoiceController;
@@ -23,7 +24,8 @@ $router->registerRoutesFromControllerAttributes(
     [
       HomeController::class,
       InvoiceController::class,
-      UserController::class
+      UserController::class,
+      CurlController::class
     ]
 );
 
