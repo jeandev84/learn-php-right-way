@@ -67,6 +67,14 @@ class Invoice extends Model
            return self::query()
                        ->where('status', InvoiceStatus::Paid)
                        ->get()
+                       ->map(
+                           fn(Invoice $invoice) => [
+                               'invoiceNumber' => $invoice->invoice_number,
+                               'amount'        => $invoice->amount,
+                               'status'        => $invoice->status->toString(),
+                               'dueDate'       => $invoice->due_date->toDateTimeString(),
+                           ]
+                       )
                        ->toArray();
        }
 }
