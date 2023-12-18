@@ -1690,3 +1690,80 @@ Stack trace:
 #1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
 #2 {main}
   thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42
+
+Fatal error: Uncaught Error: Call to undefined method Doctrine\DBAL\Statement::fetchAll() in /var/www/app/Models/Email.php:42
+Stack trace:
+#0 /var/www/app/Services/Email/EmailService.php(24): App\Models\Email->getEmailsByStatus(Object(App\Enums\EmailStatus))
+#1 /var/www/scripts/email.php(14): App\Services\Email\EmailService->sendQueuedEmails()
+#2 {main}
+  thrown in /var/www/app/Models/Email.php on line 42

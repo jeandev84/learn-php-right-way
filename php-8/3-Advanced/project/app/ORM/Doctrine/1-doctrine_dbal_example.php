@@ -1,5 +1,6 @@
 <?php
 # https://doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#configuration
+# https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#configuration
 declare(strict_types=1);
 
 use Doctrine\DBAL\Connection;
