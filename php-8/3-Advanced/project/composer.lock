@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "74cf03fff3c24f90c3f13518cdda66c0",
+    "content-hash": "6370481d6b8f36ebe7d5f8bf28892506",
     "packages": [
         {
             "name": "doctrine/cache",
