@@ -6584,3 +6584,39 @@ Stack trace:
 #0 /var/www/scripts/email.php(12): Framework\App->__construct(Object(Framework\Container\Container))
 #1 {main}
   thrown in /var/www/framework/App.php on line 33
+
+Fatal error: Uncaught TypeError: Framework\App::__construct(): Argument #1 ($container) must be of type Illuminate\Container\Container, Framework\Container\Container given, called in /var/www/scripts/email.php on line 12 and defined in /var/www/framework/App.php:33
+Stack trace:
+#0 /var/www/scripts/email.php(12): Framework\App->__construct(Object(Framework\Container\Container))
+#1 {main}
+  thrown in /var/www/framework/App.php on line 33
+
+Fatal error: Uncaught TypeError: Framework\App::__construct(): Argument #1 ($container) must be of type Illuminate\Container\Container, Framework\Container\Container given, called in /var/www/scripts/email.php on line 12 and defined in /var/www/framework/App.php:33
+Stack trace:
+#0 /var/www/scripts/email.php(12): Framework\App->__construct(Object(Framework\Container\Container))
+#1 {main}
+  thrown in /var/www/framework/App.php on line 33
+
+Fatal error: Uncaught TypeError: Framework\App::__construct(): Argument #1 ($container) must be of type Illuminate\Container\Container, Framework\Container\Container given, called in /var/www/scripts/email.php on line 12 and defined in /var/www/framework/App.php:33
+Stack trace:
+#0 /var/www/scripts/email.php(12): Framework\App->__construct(Object(Framework\Container\Container))
+#1 {main}
+  thrown in /var/www/framework/App.php on line 33
+
+Fatal error: Uncaught TypeError: Framework\App::__construct(): Argument #1 ($container) must be of type Illuminate\Container\Container, Framework\Container\Container given, called in /var/www/scripts/email.php on line 12 and defined in /var/www/framework/App.php:33
+Stack trace:
+#0 /var/www/scripts/email.php(12): Framework\App->__construct(Object(Framework\Container\Container))
+#1 {main}
+  thrown in /var/www/framework/App.php on line 33
+
+Fatal error: Uncaught TypeError: Framework\App::__construct(): Argument #1 ($container) must be of type Illuminate\Container\Container, Framework\Container\Container given, called in /var/www/scripts/email.php on line 12 and defined in /var/www/framework/App.php:33
+Stack trace:
+#0 /var/www/scripts/email.php(12): Framework\App->__construct(Object(Framework\Container\Container))
+#1 {main}
+  thrown in /var/www/framework/App.php on line 33
+
+Fatal error: Uncaught TypeError: Framework\App::__construct(): Argument #1 ($container) must be of type Illuminate\Container\Container, Framework\Container\Container given, called in /var/www/scripts/email.php on line 12 and defined in /var/www/framework/App.php:33
+Stack trace:
+#0 /var/www/scripts/email.php(12): Framework\App->__construct(Object(Framework\Container\Container))
+#1 {main}
+  thrown in /var/www/framework/App.php on line 33
