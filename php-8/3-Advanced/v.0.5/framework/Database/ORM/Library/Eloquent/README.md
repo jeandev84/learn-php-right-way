@@ -1,0 +1,5 @@
+### Active Record Pattern (Eloquent)
+```
+
+```
+
