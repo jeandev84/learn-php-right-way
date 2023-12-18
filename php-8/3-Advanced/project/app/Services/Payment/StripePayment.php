@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Services\Payment;
 
-use App\Services\Contract\PaymentGatewayInterface;
+use App\Services\Payment\Contract\PaymentGatewayInterface;
 
 class StripePayment implements PaymentGatewayInterface
 {

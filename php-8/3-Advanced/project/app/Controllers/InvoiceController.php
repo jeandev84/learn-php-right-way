@@ -2,14 +2,11 @@
 
 namespace App\Controllers;
 
-use App\Enums\Color;
 use App\Enums\InvoiceStatus;
 use App\Models\Invoice;
-use App\Services\InvoiceService;
 use Carbon\Carbon;
 use Framework\Routing\Attributes\Get;
 use Framework\Templating\View;
-use Symfony\Component\Mailer\MailerInterface;
 
 class InvoiceController
 {

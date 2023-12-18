@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Services\Contract;
+namespace App\Services\Payment\Contract;
 
 interface PaymentGatewayInterface
 {

@@ -1,9 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Services\Invoice;
 
-use App\Services\Contract\PaymentGatewayInterface;
+use App\Services\EmailService;
+use App\Services\Payment\Contract\PaymentGatewayInterface;
+use App\Services\Sales\SalesTaxService;
 
 class InvoiceService
 {

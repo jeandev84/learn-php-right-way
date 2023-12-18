@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Services\InvoiceService;
+use App\Services\Invoice\InvoiceService;
 use Framework\Routing\Attributes\Enums\HttpMethod;
-use Framework\Routing\Attributes\Route;
 use Framework\Routing\Attributes\Get;
 use Framework\Routing\Attributes\Post;
 use Framework\Routing\Attributes\Put;
+use Framework\Routing\Attributes\Route;
 use Framework\Templating\View;
 
 class HomeController

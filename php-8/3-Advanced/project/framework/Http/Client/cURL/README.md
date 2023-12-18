@@ -74,4 +74,7 @@ Use Emailable API Integration
 HTTP Client Guzzle PHP
 ```
 https://docs.guzzlephp.org/en/stable
+https://docs.guzzlephp.org/en/stable/quickstart.html
+https://docs.guzzlephp.org/en/stable/handlers-and-middleware.html
 ```
+

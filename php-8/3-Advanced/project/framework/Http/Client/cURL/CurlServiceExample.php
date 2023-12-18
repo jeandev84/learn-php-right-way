@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\cURL;
+namespace Framework\Http\Client\cURL;
 
 class CurlServiceExample
 {

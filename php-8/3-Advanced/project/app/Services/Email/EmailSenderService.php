@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Services\Email;
 
-class EmailService
+class EmailSenderService
 {
       public function send(array $to, string $template): bool
       {

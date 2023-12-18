@@ -3,14 +3,14 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Services\Emailable\EmailValidationService;
 use Framework\Routing\Attributes\Get;
+use Framework\Validation\Contracts\EmailValidationInterface;
 
 class CurlController
 {
 
       public function __construct(
-          protected EmailValidationService $emailValidationService
+          protected EmailValidationInterface $emailValidationService
       )
       {
       }

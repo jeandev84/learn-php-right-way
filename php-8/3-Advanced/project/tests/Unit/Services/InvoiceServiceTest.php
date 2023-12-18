@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace Tests\Unit\Services;
 
 use App\Services\EmailService;
-use App\Services\Gateway\PaymentGateway;
-use App\Services\InvoiceService;
-use App\Services\SalesTaxService;
+use App\Services\Invoice\InvoiceService;
+use App\Services\Payment\Gateway\PaymentGateway;
+use App\Services\Sales\SalesTaxService;
 use PHPUnit\Framework\TestCase;
 
 class InvoiceServiceTest extends TestCase

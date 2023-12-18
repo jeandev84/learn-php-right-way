@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Services\Gateway;
+namespace App\Services\Payment\Gateway;
 
-use App\Services\Contract\PaymentGatewayInterface;
+use App\Services\Payment\Contract\PaymentGatewayInterface;
 
 class PaymentGateway implements PaymentGatewayInterface
 {
