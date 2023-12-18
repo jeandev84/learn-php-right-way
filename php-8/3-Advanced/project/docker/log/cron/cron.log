@@ -6818,3 +6818,19 @@ Stack trace:
 #0 /var/www/scripts/email.php(10): Framework\App->__construct(Object(Framework\Container\Container))
 #1 {main}
   thrown in /var/www/framework/App.php on line 32
+
+Fatal error: Uncaught TypeError: Framework\App::__construct(): Argument #1 ($container) must be of type Illuminate\Container\Container, Framework\Container\Container given, called in /var/www/scripts/email.php on line 10 and defined in /var/www/framework/App.php:32
+Stack trace:
+#0 /var/www/scripts/email.php(10): Framework\App->__construct(Object(Framework\Container\Container))
+#1 {main}
+  thrown in /var/www/framework/App.php on line 32
+
+Fatal error: Uncaught Error: Class "Framework\Container\Container" not found in /var/www/scripts/email.php:8
+Stack trace:
+#0 {main}
+  thrown in /var/www/scripts/email.php on line 8
+
+Fatal error: Uncaught Error: Class "Framework\Container\Container" not found in /var/www/scripts/email.php:8
+Stack trace:
+#0 {main}
+  thrown in /var/www/scripts/email.php on line 8

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Services\InvoiceService;
+use App\Services\Invoice\Doctrine\InvoiceService;
 use Framework\Routing\Attributes\Get;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
