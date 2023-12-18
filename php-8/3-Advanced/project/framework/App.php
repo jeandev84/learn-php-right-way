@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Framework;
 
-use App\Services\Api\AbstractApi\EmailValidationService as AbstractApiEmailService;
 use App\Services\Api\Emailable\EmailValidationService as EmailableService;
 use Dotenv\Dotenv;
 use Framework\Config\Config;
@@ -18,9 +17,7 @@ use Illuminate\Container\Container;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Events\Dispatcher;
 use Symfony\Component\Mailer\MailerInterface;
-use Twig\Environment;
 use Twig\Extra\Intl\IntlExtension;
-use Twig\Loader\FilesystemLoader;
 
 class App
 {
@@ -103,7 +100,7 @@ class App
          } catch (RouteNotfoundException $e) {
              # header('HTTP/1.1 404 Not Found');
              http_response_code(404);
-             echo \Framework\Templating\View::make('errors/404');
+             echo Templating\PHP\View::make('errors/404');
          }
      }
 }

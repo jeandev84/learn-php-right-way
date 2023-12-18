@@ -2,14 +2,12 @@
 
 namespace App\Controllers;
 
+use App\Models\Email;
 use Framework\Routing\Attributes\Get;
 use Framework\Routing\Attributes\Post;
-use Framework\Templating\View;
-use Symfony\Component\Mailer\Mailer;
+use Framework\Templating\PHP\View;
 use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mailer\Transport;
 use Symfony\Component\Mime\Address;
-use App\Models\Email;
 
 
 class UserController

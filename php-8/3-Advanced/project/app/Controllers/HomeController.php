@@ -9,7 +9,7 @@ use Framework\Routing\Attributes\Get;
 use Framework\Routing\Attributes\Post;
 use Framework\Routing\Attributes\Put;
 use Framework\Routing\Attributes\Route;
-use Framework\Templating\View;
+use Framework\Templating\PHP\View;
 
 class HomeController
 {
