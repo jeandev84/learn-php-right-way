@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\xDebug;
+namespace App\Services\xDebug;
 
 class Xdebug
 {

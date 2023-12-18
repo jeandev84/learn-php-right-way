@@ -18,7 +18,7 @@ class InvoiceController
     #[Get('/invoices')]
     public function index(): string
     {
-        $invoices = Invoice::allPaid();
+        $invoices = Invoice::getPaidInvoices();
 
         return $this->render->render('invoices/index.twig', [
             'invoices' => $invoices
