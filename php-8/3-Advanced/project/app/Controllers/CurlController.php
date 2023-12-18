@@ -3,14 +3,14 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\cURL\CurlServiceExample;
+use App\Services\Emailable\EmailValidationService;
 use Framework\Routing\Attributes\Get;
 
 class CurlController
 {
 
       public function __construct(
-          protected CurlServiceExample $curlServiceExample
+          protected EmailValidationService $emailValidationService
       )
       {
       }
@@ -18,6 +18,10 @@ class CurlController
       #[Get('/curl')]
       public function index()
       {
-           $this->curlServiceExample->callEmailableService();
+           $result = $this->emailValidationService->verify($_ENV['YOUR_EMAIL']);
+
+           echo '<pre>';
+           print_r($result);
+           echo '</pre>';
       }
 }

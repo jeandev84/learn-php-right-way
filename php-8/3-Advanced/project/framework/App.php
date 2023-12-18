@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Framework;
 
 use App\Services\Contract\PaymentGatewayInterface;
+use App\Services\Emailable\EmailValidationService;
 use App\Services\Gateway\PaymentGateway;
 use Dotenv\Dotenv;
 use Framework\Config\Config;
@@ -58,8 +59,8 @@ class App
 
          $this->initDb($this->config->db);
 
-         $this->container->bind(PaymentGatewayInterface::class, PaymentGateway::class);
          $this->container->bind(MailerInterface::class, fn() => new CustomMailer($this->config->mailer['dsn']));
+         $this->container->bind(EmailValidationService::class, fn() => new EmailValidationService($this->config->apiKeys['emailable']));
 
          return $this;
      }
