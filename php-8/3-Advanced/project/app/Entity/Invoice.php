@@ -6,6 +6,7 @@ namespace App\Entity;
 use App\Enums\InvoiceStatus;
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
@@ -13,7 +14,7 @@ use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\Table;
-use Ramsey\Collection\Collection;
+
 
 #[Entity]
 #[Table('invoices')]
@@ -38,7 +39,7 @@ class Invoice
 
 
      #[OneToMany(targetEntity: InvoiceItem::class, mappedBy: 'invoice', cascade: ['persist', 'remove'])]
-     private $items;
+     private Collection $items;
 
 
      public function __construct()

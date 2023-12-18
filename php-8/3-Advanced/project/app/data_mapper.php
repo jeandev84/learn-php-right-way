@@ -36,6 +36,7 @@ $items = [
     ['Item 3', 4, 3.75],
 ];
 
+/*
 $invoice = (new Invoice())
            ->setAmount(45)
            ->setInvoiceNumber('1')
@@ -58,7 +59,14 @@ $entityManager->flush();
 
 echo $entityManager->getUnitOfWork()->size();
 
-/*
 $entityManager->remove($invoice);
 $entityManager->flush();
 */
+
+$invoice = $entityManager->find(Invoice::class, 4);
+
+$invoice->setStatus(InvoiceStatus::Paid);
+$item = $invoice->getItems()->get(0)->setDescription('Foo Bar');
+
+$entityManager->flush();
+
