@@ -16,6 +16,8 @@ use Illuminate\Container\Container;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Events\Dispatcher;
 use Symfony\Component\Mailer\MailerInterface;
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
 class App
 {
@@ -52,14 +54,25 @@ class App
 
      public function boot(): static
      {
+         # initialize environments
          $dotenv = Dotenv::createImmutable(dirname(__DIR__));
          $dotenv->load();
 
+         # initialize config
          $this->config = new Config($_ENV);
 
+         # initialize database
          $this->initDb($this->config->db);
 
+         # bindings services
+         $loader = new FilesystemLoader(VIEW_PATH);
+         $twig   = new Environment($loader, [
+             'cache' => STORAGE_PATH . '/cache',
+             'auto_reload' => true
+         ]);
+
          $this->container->bind(MailerInterface::class, fn() => new CustomMailer($this->config->mailer['dsn']));
+         $this->container->singleton(Environment::class, fn() => $twig);
          $this->container->bind(
      EmailValidationInterface::class,
              fn() => new EmailableService($this->config->apiKeys['emailable'])

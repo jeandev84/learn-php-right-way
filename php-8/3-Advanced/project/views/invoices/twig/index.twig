@@ -46,22 +46,18 @@
     </tr>
     </thead>
     <tbody>
-    @forelse($invoices as $invoice)
+    {% for invoice in invoices %}
     <tr>
-        <td>{{ $invoice['invoiceNumber'] }}</td>
-        <td>{{ number_format($invoice['amount'], 2) }}</td>
-        <td>{{  $invoice['status'] }}</td>
+        <td>{{ invoice.invoiceNumber }}</td>
+        <td>{{ invoice.amount|format_currency('USD') }}</td>
+        <td>{{ invoice.status }}</td>
         <td>
-            @if ($invoice['dueDate'])
-            <?= date('m/d/Y', strtotime($invoice['dueDate']))?>
-            @else
-            N/A
-            @endif
+            {{ invoice.dueDate is empty ? 'N/A' : invoice.dueDate|date('m/d/Y') }}
         </td>
     </tr>
-    @empty
-    <tr><td colspan="4">No Invoices Found</td></tr>
-    @endforelse
+    {% else %}
+        <tr><td colspan="4">No Invoices Found</td></tr>
+    {% endfor %}
     </tbody>
 </table>
 </body>
