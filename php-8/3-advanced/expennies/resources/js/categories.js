@@ -26,9 +26,9 @@ window.addEventListener('DOMContentLoaded', function () {
                 'Content-Type': 'application/json'
             }
         }).then(response => response.json())
-            .then(response => {
+          .then(response => {
                 console.log(response)
-            })
+          })
     })
 })
 
