@@ -17,19 +17,4 @@ class HomeController
     {
         return $this->twig->render($response, 'dashboard.twig');
     }
-
-
-    private function xssAttack()
-    {
-        /*
-         $user = $request->getAttribute('user');
-         var_dump($user?->getName());
-         $userName = $request->getAttribute('user')->getName();
-         $userName = '<script>alert(1)</script>';
-         include VIEW_PATH . '/xss.php';
-       */
-
-        $userName = '<script>alert(1)</script>';
-        include VIEW_PATH . '/xss.php';
-    }
 }
