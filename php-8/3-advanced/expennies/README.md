@@ -9,3 +9,15 @@
 * Run `npm run watch` if you want to build assets during development & have it automatically be watched so that it rebuilds after you make updates to front-end
 * Run `docker-compose up -d --build` to rebuild docker containers if you are using docker to make sure you are using the same versions as the videos
 ```
+
+Docker 
+```
+$ docker exec -it expennies-app bash
+```
+
+NPM
+```
+$ npm run dev   ( for development )
+$ npm run prod  ( for production )
+$ npm run watch ( for live and see the changes js, css ... )
+```
