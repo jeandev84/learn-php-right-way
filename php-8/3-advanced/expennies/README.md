@@ -21,3 +21,14 @@ $ npm run dev   ( for development )
 $ npm run prod  ( for production )
 $ npm run watch ( for live and see the changes js, css ... )
 ```
+
+Using
+- https://drawsql.app/features
+- https://drawsql.app/diagrams
+
+
+Console commands
+```
+$ php expennies list
+$ php expennies diff (migration)
+```
