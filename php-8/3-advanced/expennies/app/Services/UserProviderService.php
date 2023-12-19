@@ -6,7 +6,7 @@ namespace App\Services;
 
 use App\Contracts\UserInterface;
 use App\Contracts\UserProviderServiceInterface;
-use App\DataObjects\RegisterUserData;
+use App\DTO\RegisterUserData;
 use App\Entity\User;
 use Doctrine\ORM\EntityManager;
 

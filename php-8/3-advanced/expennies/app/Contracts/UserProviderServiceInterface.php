@@ -3,7 +3,7 @@ declare(strict_types = 1);
 
 namespace App\Contracts;
 
-use App\DataObjects\RegisterUserData;
+use App\DTO\RegisterUserData;
 
 interface UserProviderServiceInterface
 {

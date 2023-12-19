@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\DataObjects;
+namespace App\DTO;
 
 use App\Enum\SameSite;
 
