@@ -17,7 +17,7 @@ class HomeController
     {
         $user = $request->getAttribute('user');
 
-        var_dump($user?->getId());
+        var_dump($user?->getName());
 
         return $this->twig->render($response, 'dashboard.twig');
     }
