@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types = 1);
 
 use App\Enum\AppEnvironment;
@@ -26,10 +27,11 @@ return [
             'password' => $_ENV['DB_PASS'],
         ],
     ],
-    'session' => [
-        'name'     => $appSnakeName . '_session',
-        'secure'   => true,
-        'httponly' => true,
-        'samesite' => 'lax',
+    'session'               => [
+        'name'       => $appSnakeName . '_session',
+        'flash_name' => $appSnakeName . '_flash',
+        'secure'     => true,
+        'httponly'   => true,
+        'samesite'   => 'lax',
     ],
 ];

@@ -40,7 +40,6 @@ class Session implements SessionInterface
         }
     }
 
-    // may be renamed to close.
     public function save(): void
     {
         session_write_close();
@@ -74,5 +73,19 @@ class Session implements SessionInterface
     public function forget(string $key): void
     {
         unset($_SESSION[$key]);
+    }
+
+    public function flash(string $key, array $messages): void
+    {
+        $_SESSION[$this->options->flashName][$key] = $messages;
+    }
+
+    public function getFlash(string $key): array
+    {
+        $messages = $_SESSION[$this->options->flashName][$key] ?? [];
+
+        unset($_SESSION[$this->options->flashName][$key]);
+
+        return $messages;
     }
 }
