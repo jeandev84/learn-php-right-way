@@ -9,23 +9,24 @@ services:
         USER_ID: '${WWWUSER:-1000}'
         GROUP_ID: '${WWWGROUP:-1000}'
         USER: '${USER:-whoami}'
-    container_name: programwithgio-app
+    container_name: expennies-app
     restart: always
     working_dir: /var/www/
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - ../:/var/www
   nginx:
     image: nginx:1.19-alpine
-    container_name: programwithgio-nginx
+    container_name: expennies-nginx
     restart: always
     ports:
-      - 8000:80
+      - "8000:80"
     volumes:
       - ../:/var/www
       - ./nginx:/etc/nginx/conf.d
-
   db:
-    container_name: programwithgio-db
+    container_name: expennies-db
     image: mysql:8.0
     volumes:
       - ./storage/mysql:/var/lib/mysql
@@ -33,22 +34,4 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - 3307:3306
-
-
-  mailhog:
-    container_name: programwithgio-mailhog
-    image: mailhog/mailhog
-    restart: always
-    logging:
-      driver: "none"
-    ports:
-      - "8025:8025"
-      - "1025:1025"
-
-  cron:
-    container_name: programwithgio-cron
-    build: ./cron
-    volumes:
-      - ../:/var/www
-      - ./log/cron:/var/log/cron
+      - "3307:3306"

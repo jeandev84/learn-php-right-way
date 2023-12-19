@@ -3,4 +3,6 @@ vendor/
 storage/*
 docker/log/*
 docker/storage/*
+node_modules
+public/build
 .env

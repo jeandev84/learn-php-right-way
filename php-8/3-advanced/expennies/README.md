@@ -1,16 +1,11 @@
-# MVC
+## Expennies project
 
-Docker 
-```
-$ docker compose up -d --build
-$ docker exec -it programwithgio-app bash
-$ docker exec -it programwithgio-db bash
-$ docker compose stop
-```
 
-Unit Tests
+### Tips
 ```
-$ ./vendor/bin/phpunit
-$ ./vendor/bin/phpunit --filter test_there_are_no_routes_when_router_is_created
-$ ./vendor/bin/phpunit tests/Unit/Services/InvoiceServiceTest.php
+* Make sure to run `composer install` & `npm install` after you pull the latest changes or switch to a new branch so that you are always using the same versions of dependencies that I do during the lessons
+* Run `npm run dev` if you want to build assets for development
+* Run `npm run build` if you want to build assets for productions
+* Run `npm run watch` if you want to build assets during development & have it automatically be watched so that it rebuilds after you make updates to front-end
+* Run `docker-compose up -d --build` to rebuild docker containers if you are using docker to make sure you are using the same versions as the videos
 ```
