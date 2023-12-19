@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types = 1);
 
 namespace App\Services;
@@ -37,5 +38,10 @@ class CategoryService
 
         $this->entityManager->remove($category);
         $this->entityManager->flush();
+    }
+
+    public function getById(int $id): ?Category
+    {
+        return $this->entityManager->find(Category::class, $id);
     }
 }

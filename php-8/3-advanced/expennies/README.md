@@ -17,9 +17,10 @@ $ docker exec -it expennies-app bash
 
 NPM
 ```
+$ npm install
 $ npm run dev   ( for development )
 $ npm run prod  ( for production )
-$ npm run watch ( for live and see the changes js, css ... )
+$ npm run watch ( for live )
 ```
 
 Using
