@@ -5,7 +5,7 @@ namespace App\Controllers;
 
 use App\Contracts\AuthInterface;
 use App\Contracts\RequestValidatorFactoryInterface;
-use App\DTO\RegisterUserData;
+use App\DataObjects\RegisterUserData;
 use App\Exception\ValidationException;
 use App\RequestValidators\RegisterUserRequestValidator;
 use App\RequestValidators\UserLoginRequestValidator;

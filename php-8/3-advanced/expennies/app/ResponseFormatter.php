@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Formatter;
+namespace App;
 
 use Psr\Http\Message\ResponseInterface;
 
