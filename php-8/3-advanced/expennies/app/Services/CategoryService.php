@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types = 1);
 
 namespace App\Services;
@@ -6,6 +7,11 @@ namespace App\Services;
 use App\Entity\Category;
 use App\Entity\User;
 use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\Exception\NotSupported;
+use Doctrine\ORM\Exception\ORMException;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\Tools\Pagination\Paginator;
+use Doctrine\ORM\TransactionRequiredException;
 
 class CategoryService
 {
@@ -22,11 +28,25 @@ class CategoryService
         return $this->update($category, $name);
     }
 
-    public function getAll(): array
+    /**
+     * @throws NotSupported
+     */
+    public function getPaginatedCategories(int $start, int $length): Paginator
     {
-        return $this->entityManager->getRepository(Category::class)->findAll();
+        $query = $this->entityManager
+            ->getRepository(Category::class)
+            ->createQueryBuilder('c')
+            ->setFirstResult($start)
+            ->setMaxResults($length);
+
+        return new Paginator($query);
     }
 
+    /**
+     * @throws OptimisticLockException
+     * @throws ORMException
+     * @throws TransactionRequiredException
+     */
     public function delete(int $id): void
     {
         $category = $this->entityManager->find(Category::class, $id);
@@ -35,11 +55,20 @@ class CategoryService
         $this->entityManager->flush();
     }
 
+    /**
+     * @throws OptimisticLockException
+     * @throws TransactionRequiredException
+     * @throws ORMException
+     */
     public function getById(int $id): ?Category
     {
         return $this->entityManager->find(Category::class, $id);
     }
 
+    /**
+     * @throws OptimisticLockException
+     * @throws ORMException
+     */
     public function update(Category $category, string $name): Category
     {
         $category->setName($name);
