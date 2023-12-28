@@ -8,7 +8,11 @@ use App\DataObjects\DataTableQueryParams;
 use App\Entity\Category;
 use App\Entity\User;
 use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\Exception\NotSupported;
+use Doctrine\ORM\Exception\ORMException;
+use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\Tools\Pagination\Paginator;
+use Doctrine\ORM\TransactionRequiredException;
 
 class CategoryService
 {
@@ -16,6 +20,12 @@ class CategoryService
     {
     }
 
+
+
+    /**
+     * @throws OptimisticLockException
+     * @throws ORMException
+    */
     public function create(string $name, User $user): Category
     {
         $category = new Category();
@@ -25,6 +35,11 @@ class CategoryService
         return $this->update($category, $name);
     }
 
+
+
+    /**
+     * @throws NotSupported
+    */
     public function getPaginatedCategories(DataTableQueryParams $params): Paginator
     {
         $query = $this->entityManager
@@ -45,6 +60,14 @@ class CategoryService
         return new Paginator($query);
     }
 
+
+
+
+    /**
+     * @throws OptimisticLockException
+     * @throws ORMException
+     * @throws TransactionRequiredException
+    */
     public function delete(int $id): void
     {
         $category = $this->entityManager->find(Category::class, $id);
@@ -53,11 +76,26 @@ class CategoryService
         $this->entityManager->flush();
     }
 
+
+
+
+    /**
+     * @throws OptimisticLockException
+     * @throws TransactionRequiredException
+     * @throws ORMException
+    */
     public function getById(int $id): ?Category
     {
         return $this->entityManager->find(Category::class, $id);
     }
 
+
+
+
+    /**
+     * @throws OptimisticLockException
+     * @throws ORMException
+    */
     public function update(Category $category, string $name): Category
     {
         $category->setName($name);
@@ -66,5 +104,19 @@ class CategoryService
         $this->entityManager->flush();
 
         return $category;
+    }
+
+
+
+
+    /**
+     * @throws NotSupported
+    */
+    public function getCategoryNames(): array
+    {
+        return $this->entityManager->getRepository(Category::class)->createQueryBuilder('c')
+            ->select('c.id', 'c.name')
+            ->getQuery()
+            ->getArrayResult();
     }
 }
